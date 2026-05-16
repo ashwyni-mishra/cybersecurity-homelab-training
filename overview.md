@@ -1,10 +1,10 @@
-# Technical Overview & Topology
+# Technical Overview and Topology
 
 This page provides a deep dive into the underlying architecture of the CyberHomelab environment.
 
 ---
 
-## 🏗️ Architectural Overview
+## Architectural Overview
 The lab utilizes a multi-layer nested virtualization strategy to isolate offensive traffic from the host network.
 
 - **Primary Hypervisor**: VMware Workstation Player/Pro (Type-2)
@@ -16,7 +16,7 @@ The lab utilizes a multi-layer nested virtualization strategy to isolate offensi
 ---
 
 <a name="network-topology"></a>
-## 🌐 Network Topology
+## Network Topology
 
 The following diagram illustrates the traffic flow and isolation boundaries within the homelab.
 

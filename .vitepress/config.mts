@@ -5,14 +5,14 @@ export default withMermaid({
   title: "CyberHomelab",
   description: "Enterprise Nested Cybersecurity Training Architecture",
   cleanUrls: true,
+  srcExclude: ['README.md'],
   rewrites: {
-    'README.md': 'index.md'
+    'overview.md': 'index.md'
   },
   themeConfig: {
     logo: 'https://github.com/ashwyni-mishra.png',
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Overview', link: '/overview' },
       { text: 'Curriculum', link: '/curriculum' },
       { text: 'Author', link: '/author' }
     ],
@@ -23,7 +23,7 @@ export default withMermaid({
       {
         text: 'Getting Started',
         items: [
-          { text: 'Technical Overview', link: '/overview' },
+          { text: 'Technical Overview', link: '/' },
           { text: 'Interactive Index', link: '/curriculum' }
         ]
       },
@@ -35,7 +35,6 @@ export default withMermaid({
       },
       {
         text: 'Module 1: Host Infrastructure',
-
         items: [
           { text: 'Introduction to Nested Virtualization', link: '/lessons/01-01-introduction-to-nested-virtualization' },
           { text: 'Host BIOS and Hardware Acceleration', link: '/lessons/01-02-host-bios-and-hardware-acceleration' },
