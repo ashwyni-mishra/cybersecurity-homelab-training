@@ -12,7 +12,8 @@ export default withMermaid({
     logo: 'https://github.com/ashwyni-mishra.png',
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Curriculum', link: '/lessons/01-01-introduction-to-nested-virtualization' },
+      { text: 'Overview', link: '/overview' },
+      { text: 'Curriculum', link: '/curriculum' },
       { text: 'Author', link: '/author' }
     ],
     search: {
@@ -20,10 +21,10 @@ export default withMermaid({
     },
     sidebar: [
       {
-        text: 'Architecture',
+        text: 'Getting Started',
         items: [
-          { text: 'Design Overview', link: '/#architectural-overview' },
-          { text: 'Network Topology', link: '/#network-topology' }
+          { text: 'Technical Overview', link: '/overview' },
+          { text: 'Interactive Index', link: '/curriculum' }
         ]
       },
       {
@@ -34,6 +35,7 @@ export default withMermaid({
       },
       {
         text: 'Module 1: Host Infrastructure',
+
         items: [
           { text: 'Introduction to Nested Virtualization', link: '/lessons/01-01-introduction-to-nested-virtualization' },
           { text: 'Host BIOS and Hardware Acceleration', link: '/lessons/01-02-host-bios-and-hardware-acceleration' },
