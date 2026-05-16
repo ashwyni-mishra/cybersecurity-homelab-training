@@ -1,6 +1,11 @@
 # Curriculum Index
 
-This curriculum is designed as a modular, platform-agnostic path through the complexities of modern cybersecurity infrastructure. Each module builds upon the previous, and you can choose the hypervisor and operating system that best fits your hardware.
+::: info COMMUNITY CONTRIBUTION
+This project is a community-driven effort. Your contributions, feedback, and efforts to improve the CyberHomelab curriculum are highly appreciated and valued. Thank you for helping build a better learning environment for everyone.
+:::
+
+This curriculum is designed as a modular, platform-agnostic path through the complexities of modern cybersecurity infrastructure.
+ Each module builds upon the previous, and you can choose the hypervisor and operating system that best fits your hardware.
 
 ---
 

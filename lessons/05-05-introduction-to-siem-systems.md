@@ -18,3 +18,8 @@ Security Information and Event Management (SIEM) provides a holistic view of an 
 
 ## Evolution to XDR
 Modern SIEMs are evolving into Extended Detection and Response (XDR) platforms, which integrate more closely with endpoint protection and network security tools to provide automated response capabilities.
+
+## Reference Links
+- **Wazuh SIEM/XDR**: [Official Documentation](https://documentation.wazuh.com/current/index.html)
+- **Gartner SIEM Guide**: [Understanding SIEM Capabilities](https://www.gartner.com/en/information-technology/glossary/security-information-and-event-management-siem)
+- **Elastic Stack for Security**: [Introduction to Elastic Security](https://www.elastic.co/security)

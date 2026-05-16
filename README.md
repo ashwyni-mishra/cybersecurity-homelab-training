@@ -1,25 +1,26 @@
 # CyberHomelab
 
-A comprehensive, self-hosted cybersecurity training platform designed to bridge the gap between theoretical security concepts and practical, hands-on experience.
+A platform-agnostic, comprehensive cybersecurity training framework designed to bridge the gap between theoretical security concepts and practical, hands-on experience.
 
-## Live Website
-The interactive guide and curriculum are hosted at: **[cyberlab.ashwanimishra.tech](https://cyberlab.ashwanimishra.tech)**
+## Interactive Guide & Curriculum
+The full 50-lesson curriculum and interactive book are hosted at:
+### **[cyberlab.ashwanimishra.tech](https://cyberlab.ashwanimishra.tech)**
 
-## Project Overview
-CyberHomelab provides a reproducible and isolated environment where learners can master the entire lifecycle of security operations—from infrastructure setup to offensive tactics and defensive implementation.
+## Project Highlights
+- **Multi-Platform**: Supports Windows, macOS (Intel/Silicon), and Linux.
+- **Hypervisor Agnostic**: Compatible with VMware, VirtualBox, and KVM/QEMU.
+- **Nested Architecture**: Learn to build enterprise-grade isolated environments on a single workstation.
+- **Full Lifecycle**: Covers Infrastructure, Networking, Provisioning, Offense, and Defense.
 
-## Curriculum Structure
-The course is divided into five progressive modules:
-1. **Host Infrastructure**: Foundational hypervisor setup and nested virtualization principles.
-2. **Network Segregation**: Establishing isolated network topologies using virtual bridges and firewalls.
-3. **Target Provisioning**: Deploying LXC, Dockerized apps, and Windows AD environments.
-4. **Offensive Operations**: Mastering reconnaissance, vulnerability scanning, and exploitation.
-5. **Defensive Security**: Implementing SIEM monitoring, traffic analysis, and incident response.
+## Community & Feedback
+::: info 🤝 Community Note
+This project is a community-driven effort. Your contributions, feedback, and efforts to improve the CyberHomelab curriculum are highly appreciated. 
+:::
 
 ## Author
 **Ashwani Mishra**
-- **Website**: [ashwhwanimishra.me](https://ashwhwanimishra.me/)
-- **GitHub**: [@ashwyni-mishra](https://github.com/ashwyni-mishra)
+- [ashwhwanimishra.me](https://ashwhwanimishra.me/)
+- [GitHub Profile](https://github.com/ashwyni-mishra)
 
 ---
-*Note: This README is optimized for GitHub. For the full interactive learning experience, please visit the live site.*
+*Note: For the best learning experience, including interactive diagrams and cross-platform instructions, please visit the live site.*

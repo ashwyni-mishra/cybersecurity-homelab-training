@@ -1,6 +1,11 @@
 # Project Overview
 
-CyberHomelab is a platform-agnostic, comprehensive cybersecurity training framework designed to bridge the gap between theoretical security concepts and practical, hands-on experience. This project is engineered to work across all major operating systems and hypervisors, providing a reproducible and isolated environment for mastering security operations.
+::: info 🤝 COMMUNITY SUPPORT
+This project thrives on community feedback. Your efforts to improve, translate, or refine these labs are deeply appreciated and contribute to a stronger security community.
+:::
+
+CyberHomelab is a platform-agnostic, comprehensive cybersecurity training framework
+ designed to bridge the gap between theoretical security concepts and practical, hands-on experience. This project is engineered to work across all major operating systems and hypervisors, providing a reproducible and isolated environment for mastering security operations.
 
 ## Project Goals
 

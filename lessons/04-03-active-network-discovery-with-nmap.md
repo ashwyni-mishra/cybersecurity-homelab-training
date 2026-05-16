@@ -9,3 +9,8 @@ Nmap (Network Mapper) is the industry-standard tool for network discovery and se
 - **SYN Stealth Scan**: `nmap -sS <target>`.
 - **UDP Scan**: `nmap -sU <target>`.
 - **Timing Templates**: `-T0` (Paranoid) to `-T5` (Insane).
+
+## Reference Links
+- **Nmap Official Documentation**: [The Nmap Reference Guide](https://nmap.org/book/man.html)
+- **Nmap Scripting Engine (NSE)**: [Browse Official Scripts](https://nmap.org/nsedoc/)
+- **Top 10 Scanning Techniques**: [Nmap.org Guide](https://nmap.org/book/nmap-usage.html)

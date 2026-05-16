@@ -12,5 +12,8 @@ Professional security testing follows structured methodologies to ensure thoroug
 6. Command and Control (C2)
 7. Actions on Objectives
 
-## PTES (Penetration Testing Execution Standard)
-Focuses on the business process, including Pre-engagement, Intelligence Gathering, Threat Modeling, Vulnerability Analysis, Exploitation, Post-Exploitation, and Reporting.
+## Reference Frameworks
+- **MITRE ATT&CK**: [Browse Tactics and Techniques](https://attack.mitre.org/)
+- **Cyber Kill Chain**: [Lockheed Martin Overview](https://www.lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html)
+- **PTES**: [The Standard Guide](http://www.pentest-standard.org/index.php/Main_Page)
+- **OWASP WSTG**: [Web Security Testing Guide](https://owasp.org/www-project-web-security-testing-guide/)
