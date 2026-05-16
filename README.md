@@ -4,7 +4,7 @@ A platform-agnostic, comprehensive cybersecurity training framework designed to 
 
 ## Interactive Guide & Curriculum
 The full 50-lesson curriculum and interactive book are hosted at:
-### **[cyberlab.ashwanimishra.tech](https://cyberlab.ashwanimishra.tech)**
+### **[cyberhomelab.ashwanimishra.tech](https://cyberlab.ashwanimishra.tech)**
 
 ## Project Highlights
 - **Multi-Platform**: Supports Windows, macOS (Intel/Silicon), and Linux.
