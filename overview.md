@@ -23,6 +23,23 @@ The lab environment utilizes a multi-layer nested virtualization strategy. This 
 
 ---
 
+## Required Resources
+
+To successfully build the CyberHomelab environment, you will need to download and prepare the following official software components:
+
+### Primary Infrastructure
+- **VMware Workstation**: [Download Player or Pro](https://www.vmware.com/products/workstation-pro/workstation-pro-evaluation.html)
+- **Proxmox VE**: [Download ISO Images](https://www.proxmox.com/en/downloads/category/iso-images-proxmox-ve)
+- **pfSense**: [Download Community Edition](https://www.pfsense.org/download/)
+
+### Operating Systems & Tools
+- **Kali Linux**: [Download Official Images](https://www.kali.org/get-kali/)
+- **Wazuh**: [Installation Documentation](https://documentation.wazuh.com/current/installation-guide/index.html)
+- **Wireshark**: [Download Tool](https://www.wireshark.org/download.html)
+- **Burp Suite**: [Download Community Edition](https://portswigger.net/burp/communitydownload)
+
+---
+
 ## Network Topology
 
 The following diagram illustrates the traffic flow and isolation boundaries within the homelab.
