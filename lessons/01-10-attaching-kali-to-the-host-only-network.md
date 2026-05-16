@@ -1,29 +1,37 @@
-# 01-10: Attaching Kali to the Host-Only Network
+# 01-10: Attaching Attacker to Network
 
-## Objective
-To transition Kali Linux from the NAT network (used for updates) to the isolated Host-Only network (VMnet2), where it can interact with the Proxmox environment without exposing the lab traffic to the internet or the production host network.
+## Overview
+To allow the Attacker (Kali Linux) to reach the nested lab, we must move it from the general NAT network to the **Isolated Network** (Dirty Pipe) we created in Lesson 01-04.
 
-## VMware Settings Modification
-1.  Shut down the Kali Linux VM.
-2.  Right-click the VM and select **Settings**.
-3.  Select the **Network Adapter**.
-4.  Change the connection type to **Custom: Specific virtual network**.
-5.  Select **VMnet2 (Host-only)** from the dropdown.
-6.  Click **OK**.
-7.  Power on the VM.
+---
 
-## OS-Level Configuration (Kali)
-Since the VMnet2 network does not have a DHCP server (configured in 01-05), a static IP must be assigned manually.
+## Configuration by Platform
 
-1.  Open the network configuration file or use the GUI network manager.
-2.  Assign the following static IP configuration:
-    - **IP Address**: `10.0.2.5`
-    - **Netmask**: `255.255.255.0`
-    - **Gateway**: `10.0.2.1` (This will be the pfSense address later).
-3.  Restart the networking service:
-```bash
-sudo systemctl restart networking
-```
+@tabs
 
-## Verification
-Verify the interface status using `ip addr`. The `eth0` interface should now reflect the assigned `10.0.2.5` address. Connectivity to Proxmox will be established once the bridges are configured in the next module.
+@tab VMware
+1. Shut down the Kali VM.
+2. Go to **Settings > Network Adapter**.
+3. Select **"Custom: Specific virtual network"**.
+4. Choose **VMnet2 (Host-only)**.
+5. Boot the VM and verify it no longer has internet access (expected).
+
+@tab VirtualBox
+1. Shut down the Kali VM.
+2. Go to **Settings > Network**.
+3. Change "Attached to" to **"Host-only Adapter"**.
+4. Select the adapter you created earlier (e.g., `vboxnet0`).
+5. Boot and verify internal connectivity.
+
+@tab KVM/Libvirt
+1. Open the VM details in `virt-manager`.
+2. Select the **NIC** device.
+3. Change the **Network source** to the "Isolated" network you created.
+4. Apply and start the VM.
+
+@endtabs
+
+---
+
+## Testing the Link
+Run `ip a` on your Attacker machine. You should see an interface connected to the isolated segment. You will not have an IP address until we configure the **pfSense Gateway** in Module 2.

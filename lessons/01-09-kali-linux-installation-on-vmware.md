@@ -1,31 +1,39 @@
-# 01-09: Kali Linux Installation on VMware
+# 01-09: Attacker OS Installation
 
-## Introduction
-Kali Linux is the industry-standard Linux distribution for penetration testing and security auditing. In this architecture, Kali will be installed as a separate VM on the L1 hypervisor (VMware Workstation), acting as the primary offensive engine.
+## Overview
+The "Attacker" machine is the central hub for our offensive operations. **Kali Linux** is the industry-standard choice, providing a pre-configured suite of penetration testing tools.
 
-## Installation Steps (VMware)
+---
 
-1.  **New Virtual Machine**: Choose "Typical".
-2.  **ISO Image**: Select the Kali Linux Installer ISO.
-3.  **Guest OS**: Select "Linux" and "Debian 11 (64-bit)".
-4.  **Processor/Memory**: 2 Cores and 4GB RAM is recommended.
-5.  **Network**: Initially set to **NAT** to facilitate updates during installation.
-6.  **Disk**: 80GB (SCSI).
+## Deployment Guide
 
-## Kali Installer Configuration
-- **Language/Region**: Default.
-- **Hostname**: `kali`.
-- **Domain**: `lab.local`.
-- **User Account**: Create a non-root user.
-- **Partitioning**: "Guided - use entire disk".
-- **Software Selection**:
-  - Desktop Environment: XFCE (default) or GNOME.
-  - Tools: Select "default" and "large" for a comprehensive toolset.
-- **GRUB Bootloader**: Install to the primary drive.
+@tabs
 
-## Post-Install Verification
-Log in to Kali and update the system:
-```bash
-sudo apt update && sudo apt full-upgrade -y
-```
-Ensure that essential tools like `nmap`, `metasploit-framework`, and `wireshark` are installed and functional.
+@tab VMware
+1. **New VM**: Select "Typical".
+2. **ISO**: Choose the Kali Linux Installer ISO.
+3. **Hardware**: Assign at least 2 cores and 4GB of RAM.
+4. **Network**: Initially set to **NAT** for updates, then switch to **VMnet2 (Host-Only)** later.
+5. **Install**: Follow the graphical installer. Use `kali` / `kali` as the default credentials.
+
+@tab VirtualBox
+1. **New VM**: Type: Linux, Version: Debian (64-bit).
+2. **Settings > System**: Enable EFI (optional but recommended).
+3. **Settings > Storage**: Attach the Kali ISO to the virtual optical drive.
+4. **Network**: Adapter 1 set to **NAT Network**.
+5. **Install**: Follow the graphical installer.
+
+@tab KVM/QEMU
+1. **New VM**: Choose "Local install media".
+2. **Memory/CPU**: 4096 MiB / 2 CPUs.
+3. **Network**: Select the **NAT** network bridge.
+4. **Install**: Standard Debian-based installation process.
+
+@endtabs
+
+---
+
+## Post-Install Checklist
+- [ ] Run `sudo apt update && sudo apt full-upgrade -y`.
+- [ ] Install guest additions/tools (e.g., `open-vm-tools-desktop`).
+- [ ] Verify you have a terminal, browser, and standard tools like `nmap` and `metasploit-framework`.

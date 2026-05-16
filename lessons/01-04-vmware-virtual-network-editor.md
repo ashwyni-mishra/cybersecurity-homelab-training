@@ -1,20 +1,34 @@
-# 01-04: VMware Virtual Network Editor
+# 01-04: Virtual Network Configuration
 
 ## Overview
-The Virtual Network Editor (VNE) is a critical utility provided with VMware Workstation Pro. It allows for the management and configuration of virtual networks (VMnets) that connect virtual machines to each other and to the physical host's network.
+Proper network configuration is critical for lab isolation. We must establish two primary virtual networks:
+1. **NAT/Bridge**: For internet access and management.
+2. **Host-Only/Isolated**: For internal lab traffic (The "Dirty Pipe").
 
-## Default Network Types
+---
 
-1.  **Bridged (VMnet0)**: Connects virtual machines directly to the physical network using the host's network adapter. The VM appears as a separate physical device on the network.
-2.  **NAT (VMnet8)**: Virtual machines share the host's IP address. This is the default for providing internet access to VMs while keeping them behind a virtual firewall/router.
-3.  **Host-Only (VMnet1)**: Creates a network that is completely isolated from the physical network. VMs can only communicate with each other and the host.
+## Configuration by Platform
 
-## Advanced Configuration
-The VNE allows for:
-- Changing Subnet IP ranges.
-- Configuring DHCP settings for each VMnet.
-- Creating additional custom VMnets (e.g., VMnet2, VMnet3) for complex lab isolation.
-- Managing Host Virtual Adapters (the interfaces seen by the host OS).
+@tabs
 
-## Accessing the Editor
-The Virtual Network Editor must be run with **Administrator** privileges to modify network configurations. It is typically found in the VMware folder in the Start Menu or via the `Edit` > `Virtual Network Editor` menu within VMware Workstation.
+@tab VMware (Windows/macOS/Linux)
+1. Open **Virtual Network Editor** (Windows/Linux) or **VMware Fusion Settings > Network**.
+2. **VMnet8 (NAT)**: Usually exists by default. Provides DHCP and internet access.
+3. **VMnet2 (Host-Only)**: Create a new custom network. Ensure "Connect a host virtual adapter" is checked, but **Disable DHCP**. We will manually assign IPs or use pfSense.
+
+@tab VirtualBox (All Platforms)
+1. Go to **File > Tools > Network Manager**.
+2. **Host-only Networks**: Create a new adapter (e.g., `vboxnet0`). Set IPv4 to `192.168.100.1` and mask `255.255.255.0`. **Disable the DHCP Server**.
+3. **NAT Network**: Go to the "NAT Networks" tab and create a new network (e.g., `NatNetwork`).
+
+@tab Linux (KVM/Libvirt)
+1. Open `virt-manager` and go to **Edit > Connection Details > Virtual Networks**.
+2. **Default (NAT)**: Usually active. Provides `192.168.122.0/24` by default.
+3. **Isolated Network**: Create a new network. Set mode to "Isolated". Set IP range (e.g., `10.0.0.0/24`). **Disable DHCP** if you plan to use pfSense as the DHCP server.
+
+@endtabs
+
+---
+
+## Technical Concept: The Isolated Network
+This network has no route to the host or the internet. It exists only within the memory of the hypervisor. By connecting both the Attacker and the Target Gateway to this network, we create a secure, software-defined playground.

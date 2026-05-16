@@ -1,31 +1,40 @@
-# 01-07: Deploying Proxmox as a Nested VM
+# 01-07: Deploying Nested Proxmox
 
-## Objective
-To install Proxmox VE as a virtual machine within VMware Workstation while ensuring it has the necessary hardware access to perform nested virtualization.
+## Overview
+Proxmox VE is a Type-1 hypervisor. In this lab, we deploy it as a "Nested" VM (Level 2) inside our primary hypervisor. This requires enabling "Hardware Virtualization Passthrough" so Proxmox can host its own VMs.
 
-## VM Configuration (L1 - VMware)
+---
 
-1.  **New Virtual Machine**: Choose "Custom (advanced)".
-2.  **Hardware Compatibility**: Use the latest Workstation version.
-3.  **Installer Disk Image**: Select the Proxmox VE ISO.
-4.  **Guest OS**: Select "Linux" and "Debian 11 (64-bit)" or the latest Debian version.
-5.  **Processors**:
-    - **Number of processors**: 1 (minimum).
-    - **Number of cores per processor**: 2 (minimum).
-    - **Virtualization Engine**: Ensure **"Virtualize Intel VT-x/EPT or AMD-V/RVI"** is **CHECKED**. This is the most critical setting for nested virtualization.
-6.  **Memory**: 4GB (minimum) or 8GB+ (recommended).
-7.  **Network Adapter**:
-    - Adapter 1: Connect to **NAT (VMnet8)** for internet access (updates/management).
-    - Adapter 2: Add a second adapter and connect it to **Custom: VMnet2 (Host-only)** for the offensive lab traffic.
-8.  **Disk**: 100GB (SCSI or NVMe).
+## Configuration by Primary Hypervisor
 
-## Installation inside the VM
-Follow the Proxmox installation prompts:
-- Select the target disk.
-- Configure localization (Country, Time Zone, Keyboard).
-- Set a strong root password and provide an email.
-- **Management Interface**: Select the adapter connected to NAT (usually `eth0`).
-- **Hostname**: `pve01.lab.local`.
-- **IP Address**: Assign a static IP (e.g., `192.168.x.100`) within the VMware NAT range.
-- **Gateway/DNS**: Use the VMware NAT gateway (usually `192.168.x.2`).
-- Confirm and install.
+@tabs
+
+@tab VMware (Workstation/Fusion)
+1. **Processor Settings**: In the VM settings, go to **Processors**.
+2. **Virtualization engine**: Check the box for **"Virtualize Intel VT-x/EPT or AMD-V/RVI"**.
+3. **I/O Memory**: Check **"Virtualize IOMMU (IO memory management unit)"**.
+4. **RAM**: Assign at least 8GB of RAM to the Proxmox VM.
+
+@tab VirtualBox
+1. **System Settings**: Go to **Settings > System > Processor**.
+2. **Acceleration**: Check the box for **"Enable Nested VT-x/AMD-V"**. (Note: If greyed out, use the command line: `VBoxManage modifyvm "VM Name" --nested-hw-virt on`).
+3. **Network**: Ensure the first adapter is set to **Bridge** or **NAT Network**.
+
+@tab Linux (KVM/QEMU)
+1. **CPU Model**: In `virt-manager`, set the CPU model to **"host-passthrough"**.
+2. **XML Config**: (Optional) Verify nested virtualization is enabled on the host:
+   ```bash
+   cat /sys/module/kvm_intel/parameters/nested # Should be 'Y' or '1'
+   ```
+3. **Memory**: Enable **"Memory Ballooning"** and assign sufficient resources.
+
+@endtabs
+
+---
+
+## Proxmox ISO Installation
+1. Boot the VM from the Proxmox VE ISO.
+2. Select **"Install Proxmox VE"**.
+3. Follow the EULA and disk selection (defaults are usually fine).
+4. **Network Config**: Assign a static IP from your **NAT/Management** network range.
+5. **Reboot**: Once finished, access the GUI via `https://<static-ip>:8006`.

@@ -1,23 +1,57 @@
-# 01-03: Installing VMware Workstation
+# 01-03: Setting Up the Primary Hypervisor
 
-## Introduction
-VMware Workstation Pro and VMware Workstation Player are industry-standard Type-2 hypervisors for Windows and Linux. They provide robust support for nested virtualization, making them ideal for the L1 hypervisor in this architecture.
+## Overview
+The primary hypervisor (Level 1) is installed directly on your host operating system. It provides the foundation for our nested lab environment.
 
-## Installation Steps (Windows)
+---
 
-1.  **Download**: Obtain the latest installer from the official VMware website.
-2.  **Execute**: Run the `.exe` installer with administrative privileges.
-3.  **Setup Wizard**:
-    - Accept the End User License Agreement.
-    - Select the installation directory (default is recommended).
-    - **Enhanced Keyboard Driver**: It is recommended to enable this for better input handling.
-    - **Add to PATH**: Ensure the VMware console tools are added to the system PATH.
-4.  **User Experience**: Opt-in or out of the product improvement program as per organizational policy.
-5.  **License**: Enter a valid Pro license key or select the non-commercial use option for Player.
-6.  **Reboot**: A system restart is required to initialize the virtual network drivers and bridge services.
+## Installation Guide
+
+Select the tab that matches your host operating system and preferred hypervisor.
+
+@tabs
+
+@tab Windows (VMware)
+1. **Download**: Obtain VMware Workstation Player (Free) or Pro.
+2. **Install**: Run the installer and follow the wizard.
+3. **Reboot**: A system restart is required to initialize virtual network drivers.
+4. **Verify**: Open the application and ensure you can create a new Virtual Machine.
+
+@tab Windows (VirtualBox)
+1. **Download**: Obtain the latest version of Oracle VM VirtualBox.
+2. **Install**: Run the installer; ensure the "VirtualBox Networking" components are selected.
+3. **Extension Pack**: Install the VirtualBox Extension Pack for USB 2.0/3.0 support.
+4. **Reboot**: Recommended to ensure kernel drivers are loaded.
+
+@tab macOS (VMware Fusion)
+1. **Download**: Obtain VMware Fusion Player (Personal Use) or Pro.
+2. **Install**: Drag the application to your Applications folder.
+3. **Permissions**: Grant the required "System Extensions" and "Accessibility" permissions in System Settings.
+4. **Verify**: Ensure the application launches and recognizes your CPU's virtualization features.
+
+@tab Linux (KVM/QEMU)
+1. **Install Packages**:
+   ```bash
+   sudo apt update
+   sudo apt install -y qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils virt-manager
+   ```
+2. **User Groups**: Add your user to the libvirt group:
+   ```bash
+   sudo adduser $USER libvirt
+   sudo adduser $USER kvm
+   ```
+3. **Service**: Enable and start the libvirt service:
+   ```bash
+   sudo systemctl enable --now libvirtd
+   ```
+4. **Verify**: Open `virt-manager` to ensure the connection to the QEMU/KVM hypervisor is successful.
+
+@endtabs
+
+---
 
 ## Post-Installation Check
-Upon successful installation, the following components should be present:
-- **VMware Workstation Application**: The primary management GUI.
-- **Virtual Network Editor**: Utility for configuring virtual switches (VMnets).
-- **VMware Services**: Check `services.msc` for "VMware Authorization Service" and "VMware NAT Service".
+Regardless of your platform, ensure that **Nested Virtualization** is supported. You can check this by running:
+
+- **Windows/Linux**: Look for `VT-x` or `AMD-V` in your CPU specifications.
+- **macOS**: Apple Silicon (M1/M2/M3) supports virtualization natively via the Virtualization.framework.
