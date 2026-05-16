@@ -20,10 +20,16 @@ export default withMermaid({
     },
     sidebar: [
       {
-        text: 'Project Overview',
+        text: 'Architecture',
         items: [
-          { text: 'Architecture & Topology', link: '/#network-topology' },
-          { text: 'About the Author', link: '/author' }
+          { text: 'Design Overview', link: '/#architectural-overview' },
+          { text: 'Network Topology', link: '/#network-topology' }
+        ]
+      },
+      {
+        text: 'About',
+        items: [
+          { text: 'The Author', link: '/author' }
         ]
       },
       {
