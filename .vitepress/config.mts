@@ -4,12 +4,11 @@ import { withMermaid } from 'vitepress-plugin-mermaid'
 export default withMermaid({
   title: "Cybersecurity Homelab",
   description: "Enterprise Nested Cybersecurity Training Architecture",
-  mermaid: {
-    // mermaidConfig: {
-    //   theme: 'dark',
-    // }
-  },
   cleanUrls: true,
+  srcExclude: ['**/README.md'], // Exclude README from direct processing
+  rewrites: {
+    'index.md': 'index.md'
+  },
   themeConfig: {
     nav: [
       { text: 'Home', link: '/' },
