@@ -1,12 +1,12 @@
 # Project Overview
 
-::: danger 🚨 MANDATORY: ETHICAL AGREEMENT & SAFETY FIRST
+::: danger MANDATORY: ETHICAL AGREEMENT & SAFETY FIRST
 **Before you proceed with any part of this curriculum, you MUST read and agree to the [Guidelines and Ethical Agreement](/)**. 
 
 This lab involves:
-- **Offensive Security Techniques**: Potentially harmful if used incorrectly.
-- **Strict Isolation**: Required to prevent network leakage.
-- **Legal Compliance**: You are responsible for following all local and international laws.
+- Offensive Security Techniques: Potentially harmful if used incorrectly.
+- Strict Isolation: Required to prevent network leakage.
+- Legal Compliance: You are responsible for following all local and international laws.
 
 [Read and Accept the Guidelines →](/)
 :::
@@ -14,7 +14,7 @@ This lab involves:
 ---
 
 ::: info CONTINUOUS IMPROVEMENT
-Developed and maintained by **Ashwani Mishra**. Although CyberHomelab is an independent project, community refinements and updates are deeply valued. With so much to build in the realm of security operations, your contributions help keep this environment robust and effective for all learners.
+Developed and maintained by Ashwani Mishra. Although CyberHomelab is an independent project, community refinements and updates are deeply valued. With so much to build in the realm of security operations, your contributions help keep this environment robust and effective for all learners.
 :::
 
 CyberHomelab is a platform-agnostic, comprehensive cybersecurity training framework

@@ -42,7 +42,7 @@ Implement enterprise-grade monitoring and detection. Deploy a SIEM solution (Waz
 ---
 
 ### Feedback & Contributions
-::: info 💡 HELP US IMPROVE
+::: info HELP US IMPROVE
 Found a typo? Have a suggestion for a new lesson? We value your feedback.
 - [Open a GitHub Issue](https://github.com/ashwyni-mishra/cybersecurity-homelab-training/issues)
 - [Submit a Pull Request](https://github.com/ashwyni-mishra/cybersecurity-homelab-training/pulls)

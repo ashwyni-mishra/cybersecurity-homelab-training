@@ -55,7 +55,7 @@ function acceptGuidelines() {
 
       <div v-if="showPopup" class="modal-overlay">
         <div class="modal-content">
-          <h2>🛡️ Ethical Guidelines & Agreement</h2>
+          <h2>Ethical Guidelines & Agreement</h2>
           <p>This curriculum is for <strong>educational purposes only</strong>. By proceeding, you agree to:</p>
           <ul>
             <li>Never use these techniques against unauthorized targets.</li>
