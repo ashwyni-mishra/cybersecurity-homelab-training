@@ -7,9 +7,7 @@ export default withMermaid({
   description: "Enterprise Nested Cybersecurity Training Architecture",
   cleanUrls: true,
   srcExclude: ['README.md'],
-  rewrites: {
-    'curriculum.md': 'index.md'
-  },
+  rewrites: {},
   markdown: {
     config(md) {
       md.use(tabsMarkdownPlugin)
@@ -34,7 +32,7 @@ export default withMermaid({
           { text: 'How to Follow', link: '/how-to-follow' },
           { text: 'Table of Contents', link: '/curriculum' },
           { text: 'Project Overview', link: '/overview' },
-          { text: 'Guidelines', link: '/' }
+          { text: 'Guidelines', link: '/guidelines' }
         ]
       },
       {

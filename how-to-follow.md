@@ -29,7 +29,7 @@ Each lesson is structured as a technical guide:
 
 ## 4. Safety First
 ::: danger 🛑 ISOLATION IS MANDATORY
-Never bridge your lab's "Dirty Pipe" (isolated network) to your physical network. Always ensure you are working within the boundaries defined in the [Guidelines and Ethical Agreement](/).
+Never bridge your lab's "Dirty Pipe" (isolated network) to your physical network. Always ensure you are working within the boundaries defined in the [Guidelines and Ethical Agreement](/guidelines).
 :::
 
 ## 5. Getting Help & Feedback
