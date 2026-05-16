@@ -1,7 +1,7 @@
 # Curriculum Index
 
-::: info COMMUNITY UPDATES
-Developed by **Ashwani Mishra**. Community updates and feedback are highly appreciated as we continue to expand and refine this curriculum to its full potential.
+::: info CONTINUOUS IMPROVEMENT
+This curriculum was developed and is maintained by **Ashwani Mishra**. While CyberHomelab is an independent initiative, your updates and feedback are highly appreciated. The field of cybersecurity is vast, and your efforts to help refine and expand these labs make a meaningful impact on the learning experience.
 :::
 
 This curriculum is designed as a modular, platform-agnostic path through the complexities of modern cybersecurity infrastructure.

@@ -1,7 +1,7 @@
 # Project Overview
 
-::: info 🤝 COMMUNITY UPDATES
-Developed by **Ashwani Mishra**. Community contributions and refinements are highly valued as this project continues to evolve to meet the growing needs of the security community.
+::: info 🤝 CONTINUOUS IMPROVEMENT
+Developed and maintained by **Ashwani Mishra**. Although CyberHomelab is an independent project, community refinements and updates are deeply valued. With so much to build in the realm of security operations, your contributions help keep this environment robust and effective for all learners.
 :::
 
 CyberHomelab is a platform-agnostic, comprehensive cybersecurity training framework

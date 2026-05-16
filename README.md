@@ -12,9 +12,9 @@ The full 50-lesson curriculum and interactive book are hosted at:
 - **Nested Architecture**: Learn to build enterprise-grade isolated environments on a single workstation.
 - **Full Lifecycle**: Covers Infrastructure, Networking, Provisioning, Offense, and Defense.
 
-## Community & Feedback
-::: info 🤝 Community Note
-Developed by **Ashwani Mishra**. Community updates, feedback, and efforts to improve the CyberHomelab curriculum are highly appreciated as there is always more to build.
+## Authorship & Contributions
+::: info 🤝 CONTINUOUS IMPROVEMENT
+CyberHomelab is an independent project developed and maintained by **Ashwani Mishra**. While the initiative is led by the author rather than the community, your feedback, updates, and improvements are highly valued. There is a vast landscape of security operations to cover, and your contributions help ensure this curriculum remains a cutting-edge resource for everyone.
 :::
 
 ## Author
