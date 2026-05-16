@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 import { withMermaid } from 'vitepress-plugin-mermaid'
 
 export default withMermaid({
-  title: "cybersehomelab",
+  title: "Cybersecurity Homelab and Training",
   description: "Enterprise Nested Cybersecurity Training Architecture",
   cleanUrls: true,
   rewrites: {
@@ -13,7 +13,7 @@ export default withMermaid({
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Curriculum', link: '/lessons/01-01-introduction-to-nested-virtualization' },
-      { text: 'Author', link: 'https://github.com/ashwyni-mishra' }
+      { text: 'Author', link: '/author' }
     ],
     search: {
       provider: 'local'
@@ -23,7 +23,7 @@ export default withMermaid({
         text: 'Project Overview',
         items: [
           { text: 'Architecture & Topology', link: '/#network-topology' },
-          { text: 'Author Profile', link: '/#about-the-author' }
+          { text: 'About the Author', link: '/author' }
         ]
       },
       {
