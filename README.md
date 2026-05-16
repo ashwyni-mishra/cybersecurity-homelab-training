@@ -6,6 +6,11 @@ This repository contains a comprehensive, 50-lesson curriculum designed to teach
 ## Architectural Overview
 The lab utilizes a multi-layer nested virtualization strategy to isolate offensive traffic from the host network.
 
+::: info About the Author
+**Ashwani Mishra** is a cybersecurity researcher and educator focused on building accessible training environments. 
+[GitHub Profile](https://github.com/ashwyni-mishra) | [Project Repository](https://github.com/ashwyni-mishra/cybersecurity-homelab-training)
+:::
+
 - **Primary Hypervisor**: VMware Workstation Player/Pro (Type-2)
 - **Nested Hypervisor**: Proxmox VE (Type-1 Simulation)
 - **Offensive Engine**: Kali Linux

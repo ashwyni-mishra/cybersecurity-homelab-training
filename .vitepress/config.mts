@@ -2,17 +2,22 @@ import { defineConfig } from 'vitepress'
 import { withMermaid } from 'vitepress-plugin-mermaid'
 
 export default withMermaid({
-  title: "Cybersecurity Homelab",
+  title: "cybersehomelab",
   description: "Enterprise Nested Cybersecurity Training Architecture",
   cleanUrls: true,
   rewrites: {
     'README.md': 'index.md'
   },
   themeConfig: {
+    logo: 'https://github.com/ashwyni-mishra.png',
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Curriculum', link: '/lessons/01-01-introduction-to-nested-virtualization' }
+      { text: 'Curriculum', link: '/lessons/01-01-introduction-to-nested-virtualization' },
+      { text: 'Author', link: 'https://github.com/ashwyni-mishra' }
     ],
+    search: {
+      provider: 'local'
+    },
     sidebar: [
       {
         text: 'Module 1: Host Infrastructure',

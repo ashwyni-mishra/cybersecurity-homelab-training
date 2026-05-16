@@ -5,6 +5,10 @@ In Proxmox VE, networking is built around virtual bridges (`vmbr`). A virtual br
 
 ## Core Bridges
 
+::: info BRIDGE CONCEPT
+Think of a virtual bridge as a virtualized physical switch. Each VM connected to the bridge is like plugging a network cable into that switch.
+:::
+
 ### vmbr0: Management Interface
 - **Type**: Linux Bridge
 - **Purpose**: Provides the primary management connection for the Proxmox host.
@@ -52,3 +56,8 @@ graph TD
     pfLAN --- vmbr1
     Targets --- vmbr1
 ```
+
+## Reference Links
+- [Proxmox VE Networking Documentation](https://pve.proxmox.com/wiki/Network_Configuration)
+- [Linux Bridge Architecture Explained](https://wiki.linuxfoundation.org/networking/bridge)
+- [pfSense Documentation: Virtualizing with Proxmox](https://docs.netgate.com/pfsense/en/latest/recipes/virtualize-proxmox-ve.html)
