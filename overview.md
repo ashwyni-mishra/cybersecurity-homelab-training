@@ -1,14 +1,14 @@
 # Project Overview
 
 ::: danger MANDATORY: ETHICAL AGREEMENT & SAFETY FIRST
-**Before you proceed with any part of this curriculum, you MUST read and agree to the [Guidelines and Ethical Agreement](/guidelines)**. 
+**Before you proceed with any part of this curriculum, you MUST read and agree to the [Guidelines and Ethical Agreement](/)**. 
 
 This lab involves:
 - Offensive Security Techniques: Potentially harmful if used incorrectly.
 - Strict Isolation: Required to prevent network leakage.
 - Legal Compliance: You are responsible for following all local and international laws.
 
-[Read and Accept the Guidelines →](/guidelines)
+[Read and Accept the Guidelines →](/)
 :::
 
 ---

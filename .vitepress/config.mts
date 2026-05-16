@@ -7,7 +7,9 @@ export default withMermaid({
   description: "Enterprise Nested Cybersecurity Training Architecture",
   cleanUrls: true,
   srcExclude: ['README.md'],
-  rewrites: {},
+  rewrites: {
+    'guidelines.md': 'index.md'
+  },
   markdown: {
     config(md) {
       md.use(tabsMarkdownPlugin)
@@ -19,7 +21,7 @@ export default withMermaid({
       { text: 'Home', link: '/' },
       { text: 'How to Follow', link: '/how-to-follow' },
       { text: 'Overview', link: '/overview' },
-      { text: 'Guidelines', link: '/guidelines' },
+      { text: 'Curriculum', link: '/curriculum' },
       { text: 'Author', link: '/author' }
     ],
     search: {
@@ -29,10 +31,10 @@ export default withMermaid({
       {
         text: 'Course Index',
         items: [
+          { text: 'Ethical Guidelines', link: '/' },
           { text: 'How to Follow', link: '/how-to-follow' },
-          { text: 'Table of Contents', link: '/curriculum' },
           { text: 'Project Overview', link: '/overview' },
-          { text: 'Guidelines', link: '/guidelines' }
+          { text: 'Table of Contents', link: '/curriculum' }
         ]
       },
       {
