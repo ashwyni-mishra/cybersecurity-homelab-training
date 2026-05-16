@@ -12,9 +12,9 @@ Ashwani Mishra is a cybersecurity enthusiast dedicated to creating high-quality,
 
 ## Connect with Me
 
-- **Website:** [cyberhomelab.ashwanimishra.tech](https://cyberhomelab.ashwanimishra.tech/)
+- **Website:** [ashwhwanimishra.me](https://ashwhwanimishra.me/)
 - **GitHub:** [ashwyni-mishra](https://github.com/ashwyni-mishra)
-- **Project Repository:** [Cybersecurity Homelab and Training](https://github.com/ashwyni-mishra/cybersecurity-homelab-training)
+- **Project Repository:** [CyberHomelab](https://github.com/ashwyni-mishra/cybersecurity-homelab-training)
 
 ## About this Project
 

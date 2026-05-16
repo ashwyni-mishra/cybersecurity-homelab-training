@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 import { withMermaid } from 'vitepress-plugin-mermaid'
 
 export default withMermaid({
-  title: "Cybersecurity Homelab and Training",
+  title: "CyberHomelab",
   description: "Enterprise Nested Cybersecurity Training Architecture",
   cleanUrls: true,
   rewrites: {

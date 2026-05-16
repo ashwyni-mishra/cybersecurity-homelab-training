@@ -1,4 +1,4 @@
-# Cybersecurity Homelab and Training
+# CyberHomelab
 Author: [Ashwani Mishra](/author)
 
 This repository contains a comprehensive, 50-lesson curriculum designed to teach the fundamentals and advanced concepts of nested virtualization, network security, and offensive/defensive operations. The environment is built on a single Windows workstation using VMware Workstation and Proxmox VE.
@@ -8,7 +8,7 @@ The lab utilizes a multi-layer nested virtualization strategy to isolate offensi
 
 ::: info About the Author
 **Ashwani Mishra** is a cybersecurity researcher and educator focused on building accessible training environments. 
-[View Author Profile](/author) | [GitHub Profile](https://github.com/ashwyni-mishra) | [Website](https://cyberhomelab.ashwanimishra.tech/)
+[View Author Profile](/author) | [GitHub Profile](https://github.com/ashwyni-mishra) | [Website](https://ashwhwanimishra.me/)
 :::
 
 - **Primary Hypervisor**: VMware Workstation Player/Pro (Type-2)
