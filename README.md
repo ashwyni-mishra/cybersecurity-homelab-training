@@ -17,6 +17,7 @@ The lab utilizes a multi-layer nested virtualization strategy to isolate offensi
 - **Defensive Gateway**: pfSense/OPNsense
 - **Targets**: Docker-based vulnerable applications (DVWA, Juice Shop) and LXC nodes.
 
+<a name="network-topology"></a>
 ## Network Topology
 ```mermaid
 graph TD

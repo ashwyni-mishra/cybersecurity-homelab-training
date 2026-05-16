@@ -20,6 +20,13 @@ export default withMermaid({
     },
     sidebar: [
       {
+        text: 'Project Overview',
+        items: [
+          { text: 'Architecture & Topology', link: '/#network-topology' },
+          { text: 'Author Profile', link: '/#about-the-author' }
+        ]
+      },
+      {
         text: 'Module 1: Host Infrastructure',
         items: [
           { text: 'Introduction to Nested Virtualization', link: '/lessons/01-01-introduction-to-nested-virtualization' },
