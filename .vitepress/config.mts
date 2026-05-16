@@ -24,13 +24,7 @@ export default withMermaid({
         text: 'Course Index',
         items: [
           { text: 'Table of Contents', link: '/' },
-          { text: 'Technical Overview', link: '/overview' }
-        ]
-      },
-      {
-        text: 'About the Author',
-        items: [
-          { text: 'Profile', link: '/author' }
+          { text: 'Project Overview', link: '/overview' }
         ]
       },
       {
@@ -106,6 +100,12 @@ export default withMermaid({
           { text: 'Detecting Nmap Scans in Wazuh', link: '/lessons/05-08-detecting-nmap-scans-in-wazuh' },
           { text: 'Detecting Web Attacks in Logs', link: '/lessons/05-09-detecting-web-attacks-in-logs' },
           { text: 'Implementing Proxmox Firewall Mitigations', link: '/lessons/05-10-implementing-proxmox-firewall-mitigations' }
+        ]
+      },
+      {
+        text: 'About the Author',
+        items: [
+          { text: 'Profile', link: '/author' }
         ]
       }
     ],
