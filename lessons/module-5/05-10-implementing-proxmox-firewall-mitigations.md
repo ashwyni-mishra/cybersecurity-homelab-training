@@ -1,27 +1,61 @@
 # 05-10: Implementing Proxmox Firewall Mitigations
 
-## Overview
-Proxmox VE includes a built-in firewall that provides a powerful way to protect your virtualized infrastructure. It can be configured at the cluster, node, and VM/container level.
+## What is it used for?
+Implementing firewall mitigations in Proxmox VE is the process of using the built-in, distributed firewall to protect virtual machines and containers at the hypervisor level. Unlike a traditional software firewall inside a VM, the Proxmox firewall sits at the virtual bridge, making it much harder for an attacker to bypass even if they gain root access to the guest.
 
-## Firewall Hierarchy
-1.  **Cluster Level**: Rules applied across the entire Proxmox cluster.
-2.  **Node Level**: Rules specific to an individual physical host.
-3.  **VM/Container Level**: Rules applied to a specific guest.
+This is used for:
+- **Defense-in-Depth**: Adding a second layer of network security behind the primary pfSense firewall.
+- **Micro-segmentation**: Isolating individual containers or VMs from each other, even if they are on the same virtual network segment.
+- **Incident Response**: Rapidly blocking a confirmed malicious IP address across the entire cluster without needing to touch individual VM configurations.
+- **Resource Protection**: Preventing compromised VMs from launching outbound attacks on other parts of your network.
 
-## Key Features
-- **Security Groups**: Reusable sets of firewall rules that can be applied to multiple VMs or containers.
-- **IP Sets**: Lists of IP addresses or networks that can be used as source or destination in rules.
-- **Macros**: Pre-defined rules for common services like SSH, HTTP, and DNS.
+## Techniques
+- **Hierarchical Rule Enforcement**: Applying rules at the Datacenter (cluster), Node (host), or NIC (VM) levels.
+- **Security Grouping**: Creating a standardized "Web Server" or "Database" security profile that can be instantly applied to any new VM.
+- **IP Set Management**: Maintaining dynamic lists of "Blocked IPs" or "Admin IPs" that are referenced by multiple rules.
+- **Stateful Packet Inspection (SPI)**: Automatically allowing return traffic for established connections while blocking unsolicited inbound requests.
+- **Logging and Monitoring**: Forwarding firewall drop/reject logs to a SIEM like Wazuh for centralized analysis.
 
-## Blocking Malicious IPs
-To block a malicious IP address identified during an incident:
-1.  **Navigate to Firewall**: In the Proxmox UI, go to the appropriate level (e.g., VM level).
-2.  **Add Rule**: Create a new 'In' rule.
-3.  **Action**: Set the action to `DROP` or `REJECT`.
-4.  **Source**: Enter the malicious IP address.
-5.  **Enable**: Ensure the rule is enabled.
+## How those techniques are used
+- **Emergency Blocking**: When Wazuh alerts on a brute-force attack from a specific IP, a `DROP` rule is added to the "Datacenter" firewall to block that IP from the entire lab.
+- **Service Isolation**: Creating a rule that only allows the "Offensive" network (Kali) to reach the "DMZ" on specific ports (80, 443), while blocking all other internal traffic.
+- **Macro Application**: Using pre-defined Proxmox macros (like `SSH` or `HTTP`) to quickly configure common services without needing to remember port numbers.
+- **Interface-Specific Rules**: Applying different rules to a VM's management interface versus its public-facing interface.
 
-## Best Practices
-- **Default Drop**: Use a "default drop" policy for incoming traffic and only allow necessary services.
-- **Logging**: Enable logging for dropped packets to monitor for ongoing attack attempts.
-- **Testing**: Always test new firewall rules to ensure they don't inadvertently block legitimate traffic.
+## Commands used
+
+### Enabling the Firewall via CLI
+```bash
+pve-firewall start
+```
+
+### Checking Firewall Status
+```bash
+pve-firewall status
+```
+
+### Listing Current Rules for a VM (e.g., VMID 100)
+```bash
+cat /etc/pve/firewall/100.fw
+```
+
+### Manually Adding a Block Rule (Editing config)
+```bash
+# In /etc/pve/firewall/100.fw
+[RULES]
+IN DROP -source 10.0.2.5 -log nolog
+```
+
+### Viewing Firewall Logs
+```bash
+tail -f /var/log/pve-firewall.log
+```
+
+## Summary
+The Proxmox firewall is a powerful, enterprise-grade tool that provides granular control over your lab's network security. By moving beyond simple "Allow/Deny" rules and embracing micro-segmentation and security groups, you can build a resilient architecture that can withstand and contain modern cyber attacks. This final lesson ties together the offensive and defensive concepts explored throughout the course, demonstrating the practical application of a layered defense strategy.
+
+## Reference links
+- [Proxmox VE Documentation: Firewall](https://pve.proxmox.com/pve-docs/pve-firewall.html)
+- [Proxmox Wiki: Firewall Examples](https://pve.proxmox.com/wiki/Firewall)
+- [Netfilter/IPTables: The engine behind Proxmox Firewall](https://www.netfilter.org/)
+- [NIST: Guidelines on Firewalls and Firewall Policy (SP 800-41)](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-41r1.pdf)

@@ -1,34 +1,69 @@
 # 01-04: Virtual Network Configuration
 
-## Overview
-Proper network configuration is critical for lab isolation. We must establish two primary virtual networks:
-1. **NAT/Bridge**: For internet access and management.
-2. **Host-Only/Isolated**: For internal lab traffic (The "Dirty Pipe").
+## What is it used for?
+Virtual network configuration is used to define how virtual machines communicate with each other, the host system, and the external internet. In a cybersecurity lab, it is crucial to segment traffic to prevent accidental exposure of the host network to potentially "dirty" lab traffic (malware, scans, exploits).
 
----
+Proper network configuration allows us to:
+- **Isolate Lab Traffic**: Creating a "sandbox" where exploits can be tested without affecting the home network.
+- **Simulate Real-World Architectures**: Mimicking DMZs, internal corporate networks, and public-facing segments.
+- **Provide Internet Access Safely**: Using NAT (Network Address Translation) to allow lab updates while blocking inbound threats from the internet.
+- **Enable Management Access**: Allowing the host (L0) to manage the nested hypervisor (L2) through a dedicated management network.
 
-## Configuration by Platform
+## Techniques
+- **NAT (Network Address Translation)**: The VM shares the host's IP address. It can access the internet, but the internet cannot access the VM directly.
+- **Bridged Networking**: The VM appears as a unique physical device on your local home network (it gets an IP from your home router).
+- **Host-Only Networking**: The VM can only communicate with the host and other VMs on the same host-only network. It has no external internet access.
+- **Isolated / Internal Networking**: Similar to Host-Only, but the VM cannot even communicate with the host. It only sees other VMs on the same virtual switch.
+- **DHCP Management**: Choosing whether the hypervisor provides IP addresses automatically or if you will manage them manually (static) or via a virtual firewall (pfSense).
 
-@tabs
+## How those techniques are used
+- **Management Interface**: We use NAT or a Host-Only adapter to connect to the Proxmox (L2) web interface from our physical host (L0).
+- **Isolated Lab Environment**: We use an Isolated network (e.g., `VMnet2`) for our vulnerable targets. This ensures that even if a target is compromised, the attacker cannot reach the host or the internet.
+- **Service Hosting**: Using Bridged networking if you want your lab services (like a test web server) to be accessible from other physical devices in your house.
 
-@tab VMware (Windows/macOS/Linux)
-1. Open **Virtual Network Editor** (Windows/Linux) or **VMware Fusion Settings > Network**.
-2. **VMnet8 (NAT)**: Usually exists by default. Provides DHCP and internet access.
-3. **VMnet2 (Host-Only)**: Create a new custom network. Ensure "Connect a host virtual adapter" is checked, but **Disable DHCP**. We will manually assign IPs or use pfSense.
+## Commands used
 
-@tab VirtualBox (All Platforms)
-1. Go to **File > Tools > Network Manager**.
-2. **Host-only Networks**: Create a new adapter (e.g., `vboxnet0`). Set IPv4 to `192.168.100.1` and mask `255.255.255.0`. **Disable the DHCP Server**.
-3. **NAT Network**: Go to the "NAT Networks" tab and create a new network (e.g., `NatNetwork`).
+### VMware (Virtual Network Editor - Windows/Linux)
+While mostly GUI-based, you can manage networking via the `vmnet-cfg` tool on Linux or by editing `vnetlib.exe` parameters on Windows.
+- **Open Editor (Linux)**:
+  ```bash
+  sudo vmware-netcfg
+  ```
 
-@tab Linux (KVM/Libvirt)
-1. Open `virt-manager` and go to **Edit > Connection Details > Virtual Networks**.
-2. **Default (NAT)**: Usually active. Provides `192.168.122.0/24` by default.
-3. **Isolated Network**: Create a new network. Set mode to "Isolated". Set IP range (e.g., `10.0.0.0/24`). **Disable DHCP** if you plan to use pfSense as the DHCP server.
+### Linux (Libvirt/KVM CLI)
+To list virtual networks:
+```bash
+virsh net-list --all
+```
 
-@endtabs
+To create a new network from an XML definition:
+```bash
+virsh net-define my-isolated-network.xml
+virsh net-start my-isolated-network
+virsh net-autostart my-isolated-network
+```
 
----
+Example XML for an isolated network (`isolated.xml`):
+```xml
+<network>
+  <name>isolated</name>
+  <bridge name='virbr1' stp='on' delay='0'/>
+  <ip address='192.168.100.1' netmask='255.255.255.0'>
+  </ip>
+</network>
+```
 
-## Technical Concept: The Isolated Network
-This network has no route to the host or the internet. It exists only within the memory of the hypervisor. By connecting both the Attacker and the Target Gateway to this network, we create a secure, software-defined playground.
+### Windows (PowerShell - Hyper-V Networking)
+To create a new internal switch:
+```powershell
+New-VMSwitch -Name "LabIsolated" -SwitchType Internal
+```
+
+## Summary
+Network configuration is the "glue" of your virtual lab. By understanding the differences between NAT, Bridged, and Host-Only networking, you can build a lab that is both functional and secure. The Virtual Network Editor (or its equivalents in KVM/VirtualBox) is the primary tool for carving out these virtual communication paths.
+
+## Reference links
+- [VMware: Understanding Virtual Networking](https://docs.vmware.com/en/VMware-Workstation-Pro/17/com.vmware.ws.using.doc/GUID-D9B0A334-C029-4C25-BF42-186036AD26E8.html)
+- [Proxmox VE: Network Configuration Guide](https://pve.proxmox.com/wiki/Network_Configuration)
+- [VirtualBox: Virtual Networking Modes](https://www.virtualbox.org/manual/ch06.html)
+- [Libvirt: Virtual Networking Documentation](https://libvirt.org/formatnetwork.html)

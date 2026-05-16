@@ -1,40 +1,61 @@
-# 01-07: Deploying Nested Proxmox
+# 01-07: Deploying Proxmox as a Nested VM
 
-## Overview
-Proxmox VE is a Type-1 hypervisor. In this lab, we deploy it as a "Nested" VM (Level 2) inside our primary hypervisor. This requires enabling "Hardware Virtualization Passthrough" so Proxmox can host its own VMs.
+## What is it used for?
+Deploying Proxmox as a nested VM is a technique used to create a "lab within a lab." While Proxmox is designed to be installed on physical hardware, installing it as a VM inside a primary hypervisor (like VMware) allows us to test enterprise-grade virtualization features on a single desktop or laptop.
 
----
+This deployment is used for:
+- **Scaling Hardware**: Running an entire data center worth of VMs on a single powerful physical machine.
+- **Testing Cluster Features**: Deploying multiple Proxmox nodes as VMs to test high-availability and clustering without buying multiple servers.
+- **Easy Reset and Portability**: Exporting the entire Proxmox VM to another computer or reverting it to a clean state if a lab experiment goes wrong.
+- **Security Research**: Creating a multi-layered barrier between a guest (L3) and the physical host (L0).
 
-## Configuration by Primary Hypervisor
+## Techniques
+- **Nested Hardware Virtualization Passthrough**: The critical technique of allowing the L1 hypervisor to "pass through" the CPU's VT-x or AMD-V instructions to the L2 guest.
+- **IOMMU Passthrough**: Virtualizing the I/O Memory Management Unit to allow the nested hypervisor to manage its own virtual PCI devices.
+- **Promiscuous Mode Networking**: Configuring virtual switches to allow multiple MAC addresses on a single port, which is often required for nested traffic to flow correctly.
+- **Resource Overcommitment**: Allocating more virtual resources (vCPUs, RAM) to the nested hypervisor than might be strictly available, relying on the hypervisor to manage the load.
 
-@tabs
+## How those techniques are used
+- **Enabling Acceleration**: In VMware, checking the "Virtualize Intel VT-x/EPT" box allows the Proxmox installer to detect KVM support. Without this, Proxmox will only allow slow software emulation.
+- **Assigning Multiple NICs**: Adding two virtual network adapters to the Proxmox VM: one for management (NAT) and one for the isolated lab traffic (Host-Only).
+- **Disk Provisioning**: Creating a large virtual disk (e.g., 100GB+) within the L1 hypervisor to serve as the local storage for all the L3 VMs that Proxmox will manage.
 
-@tab VMware (Workstation/Fusion)
-1. **Processor Settings**: In the VM settings, go to **Processors**.
-2. **Virtualization engine**: Check the box for **"Virtualize Intel VT-x/EPT or AMD-V/RVI"**.
-3. **I/O Memory**: Check **"Virtualize IOMMU (IO memory management unit)"**.
-4. **RAM**: Assign at least 8GB of RAM to the Proxmox VM.
+## Commands used
 
-@tab VirtualBox
-1. **System Settings**: Go to **Settings > System > Processor**.
-2. **Acceleration**: Check the box for **"Enable Nested VT-x/AMD-V"**. (Note: If greyed out, use the command line: `VBoxManage modifyvm "VM Name" --nested-hw-virt on`).
-3. **Network**: Ensure the first adapter is set to **Bridge** or **NAT Network**.
+### VirtualBox (Enabling Nested VT-x via CLI)
+If the "Nested VT-x" option is greyed out in the GUI, use this command:
+```bash
+VBoxManage modifyvm "Your_Proxmox_VM_Name" --nested-hw-virt on
+```
 
-@tab Linux (KVM/QEMU)
-1. **CPU Model**: In `virt-manager`, set the CPU model to **"host-passthrough"**.
-2. **XML Config**: (Optional) Verify nested virtualization is enabled on the host:
-   ```bash
-   cat /sys/module/kvm_intel/parameters/nested # Should be 'Y' or '1'
-   ```
-3. **Memory**: Enable **"Memory Ballooning"** and assign sufficient resources.
+### Linux KVM (Checking for Nested Support)
+To check if the physical host supports nested virtualization for Intel:
+```bash
+cat /sys/module/kvm_intel/parameters/nested
+```
+For AMD:
+```bash
+cat /sys/module/kvm_amd/parameters/nested
+```
+(If it returns `0` or `N`, you must enable it in the kernel parameters).
 
-@endtabs
+### Proxmox Initial CLI Verification
+After installation, log in to the Proxmox console and check if KVM is ready:
+```bash
+kvm-ok
+```
+(You may need to install `cpu-checker` first via `apt update && apt install cpu-checker`).
 
----
+To list the physical (virtual) CPU features detected by Proxmox:
+```bash
+lscpu | grep Virtualization
+```
 
-## Proxmox ISO Installation
-1. Boot the VM from the Proxmox VE ISO.
-2. Select **"Install Proxmox VE"**.
-3. Follow the EULA and disk selection (defaults are usually fine).
-4. **Network Config**: Assign a static IP from your **NAT/Management** network range.
-5. **Reboot**: Once finished, access the GUI via `https://<static-ip>:8006`.
+## Summary
+Deploying Proxmox as a nested VM is the heart of our homelab setup. By enabling hardware virtualization passthrough, we transform a simple virtual machine into a powerful hypervisor capable of hosting its own ecosystem of targets and tools. This multi-layered approach provides the flexibility and isolation required for advanced cybersecurity training.
+
+## Reference links
+- [Proxmox VE: Installation Guide](https://pve.proxmox.com/wiki/Installation)
+- [VMware: Enabling Nested Virtualization](https://docs.vmware.com/en/VMware-Workstation-Pro/17/com.vmware.ws.using.doc/GUID-E79B6C24-B1F1-4F90-893C-85664C59A722.html)
+- [VirtualBox: Manual on Nested Virtualization](https://www.virtualbox.org/manual/ch06.html#nested-virt)
+- [Proxmox Wiki: Running Proxmox on VMware](https://pve.proxmox.com/wiki/Proxmox_VE_inside_VMware)

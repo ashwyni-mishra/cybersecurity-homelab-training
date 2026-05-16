@@ -1,57 +1,61 @@
 # 01-03: Setting Up the Primary Hypervisor
 
-## Overview
-The primary hypervisor (Level 1) is installed directly on your host operating system. It provides the foundation for our nested lab environment.
+## What is it used for?
+The primary hypervisor (L1) is the first layer of software installed on your physical host (L0). It serves as the bridge between your physical hardware and the virtualized world. Its primary role is to manage physical resources (CPU, RAM, Storage, Network) and allocate them to virtual machines.
 
----
+In this homelab, the L1 hypervisor is used to:
+- **Host the Nested Environment**: It runs the L2 hypervisor (Proxmox), which in turn will host our security lab targets.
+- **Manage Virtual Networking**: It creates the initial virtual switches and networks that allow our lab to communicate with the outside world or stay isolated.
+- **Resource Control**: It allows us to set limits on how much of our physical machine's power is dedicated to the lab.
 
-## Installation Guide
+## Techniques
+- **Type 2 Virtualization**: Installing a hypervisor as an application on top of an existing operating system (e.g., VMware Workstation on Windows, VMware Fusion on macOS).
+- **Type 1 (Bare-Metal) Emulation**: Using tools like KVM on Linux which, while technically part of the kernel, can be managed like a Type 2 hypervisor for lab purposes.
+- **Driver Injection**: During installation, the hypervisor installs specialized drivers (like vmnet for VMware) into the host OS to handle low-level networking and hardware access.
+- **User-Mode Management**: Using GUI tools (VMware GUI, virt-manager) to interact with the underlying virtualization engine.
 
-Select the tab that matches your host operating system and preferred hypervisor.
+## How those techniques are used
+- **Software Installation**: A user downloads an executable (like `VMware-workstation-full-17.x.x.exe`) and runs it. The installer modifies the host OS kernel to allow direct hardware access.
+- **Kernel Module Loading**: On Linux, installing KVM-related packages loads modules like `kvm_intel` or `kvm_amd` into the running kernel.
+- **Virtual Interface Creation**: Upon installation, the hypervisor creates virtual network adapters on the host (e.g., `VMnet1`, `VMnet8` on Windows or `virbr0` on Linux) to facilitate host-to-guest communication.
 
-@tabs
+## Commands used
 
-@tab Windows (VMware)
-1. **Download**: Obtain VMware Workstation Player (Free) or Pro.
-2. **Install**: Run the installer and follow the wizard.
-3. **Reboot**: A system restart is required to initialize virtual network drivers.
-4. **Verify**: Open the application and ensure you can create a new Virtual Machine.
+### Linux (KVM/QEMU Installation)
+To install the necessary packages on Ubuntu/Debian:
+```bash
+sudo apt update
+sudo apt install -y qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils virt-manager
+```
 
-@tab Windows (VirtualBox)
-1. **Download**: Obtain the latest version of Oracle VM VirtualBox.
-2. **Install**: Run the installer; ensure the "VirtualBox Networking" components are selected.
-3. **Extension Pack**: Install the VirtualBox Extension Pack for USB 2.0/3.0 support.
-4. **Reboot**: Recommended to ensure kernel drivers are loaded.
+To add your user to the required groups (enabling management without `sudo`):
+```bash
+sudo adduser $USER libvirt
+sudo adduser $USER kvm
+```
 
-@tab macOS (VMware Fusion)
-1. **Download**: Obtain VMware Fusion Player (Personal Use) or Pro.
-2. **Install**: Drag the application to your Applications folder.
-3. **Permissions**: Grant the required "System Extensions" and "Accessibility" permissions in System Settings.
-4. **Verify**: Ensure the application launches and recognizes your CPU's virtualization features.
+To verify the installation:
+```bash
+virsh list --all
+```
 
-@tab Linux (KVM/QEMU)
-1. **Install Packages**:
-   ```bash
-   sudo apt update
-   sudo apt install -y qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils virt-manager
-   ```
-2. **User Groups**: Add your user to the libvirt group:
-   ```bash
-   sudo adduser $USER libvirt
-   sudo adduser $USER kvm
-   ```
-3. **Service**: Enable and start the libvirt service:
-   ```bash
-   sudo systemctl enable --now libvirtd
-   ```
-4. **Verify**: Open `virt-manager` to ensure the connection to the QEMU/KVM hypervisor is successful.
+### Windows (PowerShell - Checking Drivers)
+To check if VMware's network drivers are correctly installed:
+```powershell
+Get-NetAdapter | Where-Object { $_.InterfaceDescription -like "*VMware*" }
+```
 
-@endtabs
+### macOS (Terminal - Checking KVM-like support)
+To check if the Apple Virtualization Framework is available:
+```bash
+sysctl kern.hv_support
+```
 
----
+## Summary
+The L1 hypervisor is the foundation of your nested lab. Whether you choose VMware Workstation, VirtualBox, or KVM, the goal is the same: to create a stable, hardware-accelerated platform for running further virtual layers. Successful installation involves not just running an installer, but ensuring that kernel drivers and network interfaces are correctly initialized.
 
-## Post-Installation Check
-Regardless of your platform, ensure that **Nested Virtualization** is supported. You can check this by running:
-
-- **Windows/Linux**: Look for `VT-x` or `AMD-V` in your CPU specifications.
-- **macOS**: Apple Silicon (M1/M2/M3) supports virtualization natively via the Virtualization.framework.
+## Reference links
+- [VMware Workstation Pro Documentation](https://docs.vmware.com/en/VMware-Workstation-Pro/index.html)
+- [Oracle VM VirtualBox User Manual](https://www.virtualbox.org/manual/UserManual.html)
+- [KVM (Kernel-based Virtual Machine) Official Site](https://www.linux-kvm.org/page/Main_Page)
+- [VMware Fusion Documentation (for macOS)](https://docs.vmware.com/en/VMware-Fusion/index.html)

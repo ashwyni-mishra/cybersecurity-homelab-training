@@ -1,25 +1,51 @@
 # 05-05: Introduction to SIEM Systems
 
-## Overview
-Security Information and Event Management (SIEM) provides a holistic view of an organization's information technology security. SIEM systems collect data from various sources, analyze it for security threats, and provide alerting and reporting.
+## What is it used for?
+Security Information and Event Management (SIEM) systems provide a holistic, centralized view of an organization's IT security posture. A SIEM is primarily used for:
+*   **Data Aggregation**: Centralizing logs from thousands of endpoints, firewalls, and applications into one searchable database.
+*   **Threat Detection**: Identifying suspicious activities that might go unnoticed if looking at a single system's isolated logs.
+*   **Incident Investigation**: Providing a "single pane of glass" for analysts to search historical data during a breach to determine the root cause.
+*   **Compliance and Auditing**: Storing logs securely long-term to meet regulatory requirements (e.g., PCI-DSS, HIPAA) and automatically generating audit reports.
 
-## Core Capabilities
-- **Data Aggregation**: Collecting logs and event data from across the enterprise (servers, firewalls, applications, etc.).
-- **Correlation**: Linking events from different sources to identify complex attack patterns.
-- **Alerting**: Notifying security analysts of suspicious activity in real-time.
-- **Dashboards**: Providing visual representations of security posture and trends.
-- **Compliance**: Assisting in meeting regulatory requirements by maintaining long-term log storage and audit trails.
+## Techniques
+### Log Normalization
+Because different systems format logs differently (e.g., Windows XML Event Logs vs. Linux plain-text Syslog), a SIEM uses parsers (or decoders) to extract variables and normalize data into a common schema. This allows an analyst to search for `source_ip` regardless of whether the log originated from a Cisco router or an Apache web server.
 
-## The SIEM Workflow
-1.  **Collection**: Ingesting data via agents, syslog, or APIs.
-2.  **Normalization**: Converting diverse data formats into a common schema.
-3.  **Analysis**: Applying rules and algorithms to identify threats.
-4.  **Reporting**: Generating alerts and reports for human review.
+### Event Correlation
+Correlation is the core intelligence of a SIEM. It uses rules to logically link seemingly unrelated events across time and space. For example, a correlation rule might trigger an alert if it observes: 10 failed logins on a VPN (from firewall logs) followed immediately by a successful login, followed by an unusual, high-volume database extraction (from SQL server logs).
 
-## Evolution to XDR
-Modern SIEMs are evolving into Extended Detection and Response (XDR) platforms, which integrate more closely with endpoint protection and network security tools to provide automated response capabilities.
+### Automated Alerting
+When a correlation rule matches, the SIEM generates an alert, assigns it a severity level, and routes it to the Security Operations Center (SOC) dashboard, or integrates with tools like PagerDuty or Slack to notify analysts immediately.
 
-## Reference Links
-- **Wazuh SIEM/XDR**: [Official Documentation](https://documentation.wazuh.com/current/index.html)
-- **Gartner SIEM Guide**: [Understanding SIEM Capabilities](https://www.gartner.com/en/information-technology/glossary/security-information-and-event-management-siem)
-- **Elastic Stack for Security**: [Introduction to Elastic Security](https://www.elastic.co/security)
+## How those techniques are used
+*   **Detecting "Impossible Travel"**: A SIEM normalizes authentication logs and correlates a user logging in from New York and, 5 minutes later, the same user logging in from Tokyo. It flags this as physically impossible and alerts on a compromised credential.
+*   **Malware Outbreak Detection**: The SIEM aggregates logs from Endpoint Detection and Response (EDR) agents across all workstations. If 50 machines suddenly report "malware blocked" within a 60-second window, the SIEM escalates this from individual events to a high-severity, network-wide incident.
+*   **Reporting**: Automatically generating a monthly PDF report showing all blocked inbound attacks from the pfSense firewall to demonstrate the value of the security infrastructure to management.
+
+## Commands used
+While SIEMs are heavily GUI-based, analysts must use specific Query Languages (like KQL for Elastic/Wazuh, or SPL for Splunk) to search the normalized data effectively.
+
+**Example Queries (KQL - Kibana Query Language):**
+```text
+# Search for failed logins specifically for the root user
+rule.description: *login failed* AND data.dstuser: "root"
+
+# Find successful SSH logins originating from outside the local management subnet
+rule.groups: "sshd" AND rule.description: *success* AND NOT data.srcip: "192.168.1.0/24"
+
+# Search for execution of a specific malicious payload
+data.command: "nc -e /bin/bash"
+```
+
+**System Architecture Concepts:**
+*   **Ingestion**: SIEMs ingest data via localized agents (like `wazuh-agent`) or via standard network protocols (like sending `rsyslog` over UDP port 514).
+*   **Storage Backend**: Most modern SIEMs utilize a NoSQL database engine (like Elasticsearch or OpenSearch) under the hood to index the massive volume of text data quickly and efficiently.
+
+## Summary
+A SIEM is the brain of the Security Operations Center. It transforms raw, noisy log data from hundreds of disparate sources into actionable, prioritized alerts through the magic of normalization and correlation. Understanding how a SIEM processes data is the essential prerequisite to deploying and tuning Wazuh in the subsequent lessons.
+
+## Reference links
+- [Wazuh SIEM Official Documentation](https://documentation.wazuh.com/current/index.html)
+- [Gartner SIEM Guide](https://www.gartner.com/en/information-technology/glossary/security-information-and-event-management-siem)
+- [Elastic Security Overview](https://www.elastic.co/security)
+- [Splunk: What is SIEM?](https://www.splunk.com/en_us/data-insider/what-is-siem.html)

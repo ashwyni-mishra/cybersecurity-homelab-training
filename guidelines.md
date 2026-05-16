@@ -1,3 +1,8 @@
+---
+layout: doc
+sidebar: false
+---
+
 # Guidelines and Ethical Agreement
 
 Welcome to CyberHomelab. Before you proceed with this curriculum, it is mandatory to read and understand the following guidelines and ethical boundaries. This project is designed for educational and research purposes only.
@@ -32,4 +37,7 @@ If you do not agree to these terms, you must immediately cease use of this mater
 
 ---
 
-[I Agree - Take me to the Course Index →](/curriculum)
+<div style="text-align: center; margin-top: 2rem;">
+  <a href="/curriculum" class="VPButton medium brand">I Agree - Take me to the Course Index →</a>
+</div>
+

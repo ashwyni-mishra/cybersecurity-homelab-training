@@ -30,9 +30,9 @@ export default withMermaid({
       {
         text: 'Course Index',
         items: [
-          { text: 'Table of Contents', link: '/' },
+          { text: 'Table of Contents', link: '/curriculum' },
           { text: 'Project Overview', link: '/overview' },
-          { text: 'Guidelines', link: '/guidelines' }
+          { text: 'Guidelines', link: '/' }
         ]
       },
       {
