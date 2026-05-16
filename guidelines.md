@@ -1,6 +1,5 @@
 ---
 layout: doc
-sidebar: false
 ---
 
 # Guidelines and Ethical Agreement
