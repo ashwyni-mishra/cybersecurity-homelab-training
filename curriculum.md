@@ -1,46 +1,58 @@
-# Course Index and Modules
-*Navigate through the 50 lessons of the CyberHomelab curriculum.*
+# Curriculum Index
+
+Welcome to the CyberHomelab curriculum. This course is structured as a progressive journey, moving from fundamental infrastructure setup to advanced security operations.
 
 ---
 
-## Interactive Table of Contents
+## Module 1: Host Infrastructure
+**Objective**: Build the foundational hypervisor environment and prepare the host system for nested virtualization.
 
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+- **Foundations**: Learn the principles of nested virtualization and BIOS optimization.
+- **Primary Setup**: Install and configure VMware Workstation as the host hypervisor.
+- **Nested Deployment**: Deploy Proxmox VE as a virtualized node and prepare Kali Linux.
 
-<div style="border: 1px solid var(--vp-c-bg-soft); padding: 1.5rem; border-radius: 12px; background: var(--vp-c-bg-soft);">
-<h3>Module 1: The Foundation</h3>
-<p>Build your host infrastructure and deploy your first nested hypervisor.</p>
-<a href="/lessons/01-01-introduction-to-nested-virtualization" style="color: var(--vp-c-brand);">Explore Module 1 →</a>
-</div>
-
-<div style="border: 1px solid var(--vp-c-bg-soft); padding: 1.5rem; border-radius: 12px; background: var(--vp-c-bg-soft);">
-<h3>Module 2: Network Segregation</h3>
-<p>Master virtual bridges, firewalls, and isolated sandbox environments.</p>
-<a href="/lessons/02-01-proxmox-virtual-bridges-explained" style="color: var(--vp-c-brand);">Explore Module 2 →</a>
-</div>
-
-<div style="border: 1px solid var(--vp-c-bg-soft); padding: 1.5rem; border-radius: 12px; background: var(--vp-c-bg-soft);">
-<h3>Module 3: Target Provisioning</h3>
-<p>Orchestrate LXC containers, Docker apps, and Windows AD environments.</p>
-<a href="/lessons/03-01-linux-containers-lxc-fundamentals" style="color: var(--vp-c-brand);">Explore Module 3 →</a>
-</div>
-
-<div style="border: 1px solid var(--vp-c-bg-soft); padding: 1.5rem; border-radius: 12px; background: var(--vp-c-bg-soft);">
-<h3>Module 4: Offensive Operations</h3>
-<p>Execute reconnaissance, exploitation, and post-exploitation tactics.</p>
-<a href="/lessons/04-01-offensive-methodology-overview" style="color: var(--vp-c-brand);">Explore Module 4 →</a>
-</div>
-
-<div style="border: 1px solid var(--vp-c-bg-soft); padding: 1.5rem; border-radius: 12px; background: var(--vp-c-bg-soft);">
-<h3>Module 5: Defensive Security</h3>
-<p>Implement SIEM monitoring, traffic analysis, and firewall mitigations.</p>
-<a href="/lessons/05-01-defensive-methodology-and-incident-response" style="color: var(--vp-c-brand);">Explore Module 5 →</a>
-</div>
-
-</div>
+[Begin Module 1 →](/lessons/01-01-introduction-to-nested-virtualization)
 
 ---
 
-## Complete Lesson List
+## Module 2: Network Segregation
+**Objective**: Establish a secure, isolated network topology to contain all lab traffic.
 
-You can also browse the full list of 50 lessons in the sidebar to the left. Each module is carefully designed to build upon the knowledge gained in the previous one.
+- **Virtual Bridging**: Master the configuration of Proxmox Linux bridges (`vmbr`).
+- **Firewall Integration**: Deploy pfSense as the gateway between your offensive and target networks.
+- **Traffic Control**: Implement NAT, routing, and custom firewall rules.
+
+[Begin Module 2 →](/lessons/02-01-proxmox-virtual-bridges-explained)
+
+---
+
+## Module 3: Target Provisioning
+**Objective**: Populate the lab with a diverse range of vulnerable targets and enterprise services.
+
+- **Containerization**: Deploy lightweight targets using Linux Containers (LXC).
+- **Vulnerable Apps**: Host DVWA and OWASP Juice Shop via Docker Compose.
+- **Windows AD**: Build a vulnerable Active Directory domain for advanced exploitation testing.
+
+[Begin Module 3 →](/lessons/03-01-linux-containers-lxc-fundamentals)
+
+---
+
+## Module 4: Offensive Operations
+**Objective**: Master the methodology of penetration testing and vulnerability research.
+
+- **Reconnaissance**: Practice passive and active network discovery techniques.
+- **Vulnerability Scanning**: Use enterprise-grade tools to identify security weaknesses.
+- **Exploitation**: Gain initial access and establish reverse shells using various tactics.
+
+[Begin Module 4 →](/lessons/04-01-offensive-methodology-overview)
+
+---
+
+## Module 5: Defensive Security
+**Objective**: Implement monitoring, detection, and mitigation strategies to protect the network.
+
+- **Logging and SIEM**: Deploy Wazuh and configure host-based logging.
+- **Traffic Analysis**: Analyze network captures using tcpdump and Wireshark.
+- **Incident Response**: Practice the PICERL cycle and implement Proxmox firewall mitigations.
+
+[Begin Module 5 →](/lessons/05-01-defensive-methodology-and-incident-response)

@@ -1,22 +1,25 @@
 # CyberHomelab
-*Enterprise Nested Cybersecurity Training Architecture*
 
-Welcome to the **CyberHomelab** training project. This environment is designed to provide a comprehensive, hands-on learning experience in the fields of virtualization, network security, and cybersecurity operations.
+A comprehensive, self-hosted cybersecurity training platform designed to bridge the gap between theoretical security concepts and practical, hands-on experience.
+
+## Live Website
+The interactive guide and curriculum are hosted at: **[cyberlab.ashwanimishra.tech](https://cyberlab.ashwanimishra.tech)**
+
+## Project Overview
+CyberHomelab provides a reproducible and isolated environment where learners can master the entire lifecycle of security operations—from infrastructure setup to offensive tactics and defensive implementation.
+
+## Curriculum Structure
+The course is divided into five progressive modules:
+1. **Host Infrastructure**: Foundational hypervisor setup and nested virtualization principles.
+2. **Network Segregation**: Establishing isolated network topologies using virtual bridges and firewalls.
+3. **Target Provisioning**: Deploying LXC, Dockerized apps, and Windows AD environments.
+4. **Offensive Operations**: Mastering reconnaissance, vulnerability scanning, and exploitation.
+5. **Defensive Security**: Implementing SIEM monitoring, traffic analysis, and incident response.
+
+## Author
+**Ashwani Mishra**
+- **Website**: [ashwhwanimishra.me](https://ashwhwanimishra.me/)
+- **GitHub**: [@ashwyni-mishra](https://github.com/ashwyni-mishra)
 
 ---
-
-## 🚀 Get Started
-
-Whether you are a beginner looking to understand the basics of hypervisors or a professional aiming to practice advanced offensive and defensive tactics, this interactive guide will lead you through every step.
-
-- **[Explore the Technical Overview](/overview)**: Understand the architecture and network topology.
-- **[Browse the Course Index](/curriculum)**: View the 5 modules and start your 50-lesson journey.
-
----
-
-## 👨‍💻 About the Author
-
-::: info Ashwani Mishra
-**Ashwani Mishra** is a cybersecurity researcher and educator focused on building accessible training environments. 
-[Read More About the Author](/author) | [GitHub Profile](https://github.com/ashwyni-mishra) | [Personal Website](https://ashwhwanimishra.me/)
-:::
+*Note: This README is optimized for GitHub. For the full interactive learning experience, please visit the live site.*
