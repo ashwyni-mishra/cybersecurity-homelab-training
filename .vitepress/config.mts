@@ -5,9 +5,8 @@ export default withMermaid({
   title: "Cybersecurity Homelab",
   description: "Enterprise Nested Cybersecurity Training Architecture",
   cleanUrls: true,
-  srcExclude: ['**/README.md'], // Exclude README from direct processing
   rewrites: {
-    'index.md': 'index.md'
+    'README.md': 'index.md'
   },
   themeConfig: {
     nav: [
