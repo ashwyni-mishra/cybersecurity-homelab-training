@@ -9,9 +9,7 @@ export default withMermaid({
     //   theme: 'dark',
     // }
   },
-  rewrites: {
-    'README.md': 'index.md'
-  },
+  cleanUrls: true,
   themeConfig: {
     nav: [
       { text: 'Home', link: '/' },
