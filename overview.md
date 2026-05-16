@@ -1,6 +1,6 @@
 # Project Overview
 
-::: info 🤝 CONTINUOUS IMPROVEMENT
+::: info CONTINUOUS IMPROVEMENT
 Developed and maintained by **Ashwani Mishra**. Although CyberHomelab is an independent project, community refinements and updates are deeply valued. With so much to build in the realm of security operations, your contributions help keep this environment robust and effective for all learners.
 :::
 
