@@ -1,3 +1,30 @@
+---
+layout: home
+
+hero:
+  name: Cybersecurity Homelab
+  text: Enterprise Nested Architecture
+  tagline: A comprehensive 50-lesson curriculum for nested virtualization and security operations.
+  image:
+    src: /logo.png
+    alt: Logo
+  actions:
+    - theme: brand
+      text: Start Learning
+      link: /lessons/01-01-introduction-to-nested-virtualization
+    - theme: alt
+      text: View on GitHub
+      link: https://github.com/ashwyni-mishra/cybersecurity-homelab-training
+
+features:
+  - title: Nested Virtualization
+    details: Master VMware Workstation and Proxmox VE integration.
+  - title: Offensive Operations
+    details: Hands-on experience with Kali Linux and vulnerability exploitation.
+  - title: Defensive Security
+    details: Implement SIEM, firewalls, and incident response.
+---
+
 # Enterprise Nested Cybersecurity Training Architecture
 Author: Ashwani Mishra
 

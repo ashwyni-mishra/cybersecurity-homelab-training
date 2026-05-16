@@ -1,0 +1,29 @@
+{
+  "name": "cybersecurity-homelab-training",
+  "version": "1.0.0",
+  "description": "Author: Ashwani Mishra",
+  "main": "index.js",
+  "scripts": {
+    "docs:dev": "vitepress dev",
+    "docs:build": "vitepress build",
+    "docs:preview": "vitepress preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashwyni-mishra/cybersecurity-homelab-training.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ashwyni-mishra/cybersecurity-homelab-training/issues"
+  },
+  "homepage": "https://github.com/ashwyni-mishra/cybersecurity-homelab-training#readme",
+  "devDependencies": {
+    "mermaid": "^11.15.0",
+    "vitepress": "^1.6.4",
+    "vitepress-plugin-mermaid": "^2.0.17",
+    "vue": "^3.5.34"
+  }
+}
