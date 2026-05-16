@@ -10,9 +10,6 @@ export default withMermaid({
     // }
   },
   cleanUrls: true,
-  rewrites: {
-    'README.md': 'index.md'
-  },
   themeConfig: {
     nav: [
       { text: 'Home', link: '/' },
