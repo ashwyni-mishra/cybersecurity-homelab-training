@@ -14,7 +14,7 @@ The full 50-lesson curriculum and interactive book are hosted at:
 
 ## Community & Feedback
 ::: info 🤝 Community Note
-This project is a community-driven effort. Your contributions, feedback, and efforts to improve the CyberHomelab curriculum are highly appreciated. 
+Developed by **Ashwani Mishra**. Community updates, feedback, and efforts to improve the CyberHomelab curriculum are highly appreciated as there is always more to build.
 :::
 
 ## Author

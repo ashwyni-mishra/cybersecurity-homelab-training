@@ -1,7 +1,7 @@
 # Curriculum Index
 
-::: info COMMUNITY CONTRIBUTION
-This project is a community-driven effort. Your contributions, feedback, and efforts to improve the CyberHomelab curriculum are highly appreciated and valued. Thank you for helping build a better learning environment for everyone.
+::: info COMMUNITY UPDATES
+Developed by **Ashwani Mishra**. Community updates and feedback are highly appreciated as we continue to expand and refine this curriculum to its full potential.
 :::
 
 This curriculum is designed as a modular, platform-agnostic path through the complexities of modern cybersecurity infrastructure.
