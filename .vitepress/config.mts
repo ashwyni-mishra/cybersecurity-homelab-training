@@ -7,13 +7,13 @@ export default withMermaid({
   cleanUrls: true,
   srcExclude: ['README.md'],
   rewrites: {
-    'overview.md': 'index.md'
+    'curriculum.md': 'index.md'
   },
   themeConfig: {
     logo: 'https://github.com/ashwyni-mishra.png',
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Curriculum', link: '/curriculum' },
+      { text: 'Overview', link: '/overview' },
       { text: 'Author', link: '/author' }
     ],
     search: {
@@ -21,16 +21,16 @@ export default withMermaid({
     },
     sidebar: [
       {
-        text: 'Getting Started',
+        text: 'Course Index',
         items: [
-          { text: 'Technical Overview', link: '/' },
-          { text: 'Interactive Index', link: '/curriculum' }
+          { text: 'Table of Contents', link: '/' },
+          { text: 'Technical Overview', link: '/overview' }
         ]
       },
       {
-        text: 'About',
+        text: 'About the Author',
         items: [
-          { text: 'The Author', link: '/author' }
+          { text: 'Profile', link: '/author' }
         ]
       },
       {
