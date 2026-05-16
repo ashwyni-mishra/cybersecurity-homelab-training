@@ -64,3 +64,6 @@ Proxmox VE is the "brain" of our nested lab. By integrating KVM and LXC into a s
 - [Proxmox VE Wiki: Main Page](https://pve.proxmox.com/wiki/Main_Page)
 - [Comparison: KVM vs LXC](https://pve.proxmox.com/wiki/Linux_Container)
 - [Proxmox VE API Viewer](https://pve.proxmox.com/pve-docs/api-viewer/index.html)
+
+## Next Lesson
+[Next Lesson: 01-07 - Deploying Proxmox as a Nested VM](/lessons/module-1/01-07-deploying-proxmox-as-a-nested-vm)

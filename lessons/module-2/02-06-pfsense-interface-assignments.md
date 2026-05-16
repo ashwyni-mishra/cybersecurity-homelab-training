@@ -47,3 +47,6 @@ Correctly assigning interfaces in pfSense is critical for ensuring traffic flows
 - [Netgate: Assigning Interfaces](https://docs.netgate.com/pfsense/en/latest/install/assign-interfaces.html)
 - [Understanding DHCP Concepts](https://www.netgear.com/business/hub/blog/what-is-dhcp-and-why-is-it-important/)
 - [Proxmox: VirtIO Network Performance](https://pve.proxmox.com/wiki/VirtIO_Network_Driver)
+
+## Next Lesson
+[Next Lesson: 02-07 - Configuring NAT and Routing in pfSense](/lessons/module-2/02-07-configuring-nat-and-routing-in-pfsense)

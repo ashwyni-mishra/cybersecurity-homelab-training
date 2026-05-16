@@ -53,3 +53,6 @@ The Host-Only network (VMnet2) is the backbone of our lab's internal communicati
 - [TCP/IP Subnetting Basics](https://www.cisco.com/c/en/us/support/docs/ip/routing-information-protocol-rip/13788-3.html)
 - [Managing Virtual Networks with `virsh`](https://libvirt.org/manpages/virsh.html#network-commands)
 - [Difference between NAT, Bridge and Host-only](https://kb.vmware.com/s/article/1018693)
+
+## Next Lesson
+[Next Lesson: 01-06 - Introduction to Proxmox VE](/lessons/module-1/01-06-introduction-to-proxmox-ve)

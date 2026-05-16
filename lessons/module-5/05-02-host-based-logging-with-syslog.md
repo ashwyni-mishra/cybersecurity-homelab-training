@@ -71,3 +71,6 @@ Host-based logging is a critical component of the "Detection" pillar in security
 - [Systemd Journalctl Guide](https://www.man7.org/linux/man-pages/man1/journalctl.1.html)
 - [NIST: Guide to Computer Security Log Management (SP 800-92)](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-92.pdf)
 - [Common Linux Log Files Explained](https://linuxconfig.org/important-linux-log-files-every-admin-should-know)
+
+## Next Lesson
+[Next Lesson: 05-03 - Network Traffic Analysis with tcpdump](/lessons/module-5/05-03-network-traffic-analysis-with-tcpdump)

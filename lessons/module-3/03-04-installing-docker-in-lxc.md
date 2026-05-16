@@ -60,3 +60,6 @@ Installing Docker in LXC allows for a highly efficient "host-within-a-host" setu
 - [Proxmox VE Documentation: Docker inside LXC](https://pve.proxmox.com/wiki/Docker_inside_LXC)
 - [Docker Documentation: Install on Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
 - [Understanding Docker Storage Drivers](https://docs.docker.com/storage/storagedriver/select-storage-driver/)
+
+## Next Lesson
+[Next Lesson: 03-05 - Docker Compose Fundamentals](/lessons/module-3/03-05-docker-compose-fundamentals)

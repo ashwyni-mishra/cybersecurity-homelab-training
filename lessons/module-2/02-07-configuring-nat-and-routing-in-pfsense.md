@@ -57,3 +57,6 @@ NAT and Routing are what turn our virtual lab from a collection of isolated mach
 - [Netgate: Port Forwarding Guide](https://docs.netgate.com/pfsense/en/latest/nat/port-forwards.html)
 - [RFC 1918: Address Allocation for Private Internets](https://datatracker.ietf.org/doc/html/rfc1918)
 - [Understanding the 'pf' Packet Filter](https://www.openbsd.org/faq/pf/nat.html)
+
+## Next Lesson
+[Next Lesson: 02-08 - Establishing the DMZ](/lessons/module-2/02-08-establishing-the-dmz)

@@ -58,3 +58,6 @@ Nmap is the "Swiss Army Knife" of network security. It provides an unparalleled 
 - [Nmap Scripting Engine (NSE) Documentation](https://nmap.org/book/nse.html)
 - [The Art of Port Scanning (Nmap Book)](https://nmap.org/book/man-port-scanning-techniques.html)
 - [Nmap Cheat Sheet](https://stationx.net/nmap-cheat-sheet/)
+
+## Next Lesson
+[Next Lesson: 04-04 - Port Scanning and Service Enumeration](/lessons/module-4/04-04-port-scanning-and-service-enumeration)

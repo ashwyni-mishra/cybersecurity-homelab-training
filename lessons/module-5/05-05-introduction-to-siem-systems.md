@@ -49,3 +49,6 @@ A SIEM is the brain of the Security Operations Center. It transforms raw, noisy 
 - [Gartner SIEM Guide](https://www.gartner.com/en/information-technology/glossary/security-information-and-event-management-siem)
 - [Elastic Security Overview](https://www.elastic.co/security)
 - [Splunk: What is SIEM?](https://www.splunk.com/en_us/data-insider/what-is-siem.html)
+
+## Next Lesson
+[Next Lesson: 05-06 - Deploying Wazuh Manager in Proxmox](/lessons/module-5/05-06-deploying-wazuh-manager-in-proxmox)

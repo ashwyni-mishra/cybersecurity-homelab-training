@@ -62,3 +62,6 @@ Firewall rules are the "rules of engagement" for your lab. By properly configuri
 - [Netgate: Troubleshooting Firewall Rules](https://docs.netgate.com/pfsense/en/latest/firewall/troubleshooting-firewall-rules.html)
 - [RFC 1918: Private Address Space](https://datatracker.ietf.org/doc/html/rfc1918)
 - [The OpenBSD Packet Filter (pf) Manual](https://man.openbsd.org/pf.4)
+
+## Next Lesson
+[Next Lesson: 02-10 - Network Connectivity Testing](/lessons/module-2/02-10-network-connectivity-testing)

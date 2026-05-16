@@ -54,3 +54,6 @@ Deploying pfSense in Proxmox is a foundational step in building a sophisticated 
 - [Proxmox VE: VM Management Documentation](https://pve.proxmox.com/wiki/Qemu/KVM_Virtual_Machines)
 - [Netgate: Installing pfSense Software](https://docs.netgate.com/pfsense/en/latest/install/index.html)
 - [Understanding VirtIO Networking](https://wiki.libvirt.org/Virtio.html)
+
+## Next Lesson
+[Next Lesson: 02-06 - pfSense Interface Assignments](/lessons/module-2/02-06-pfsense-interface-assignments)

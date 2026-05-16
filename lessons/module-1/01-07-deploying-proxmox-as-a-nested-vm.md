@@ -59,3 +59,6 @@ Deploying Proxmox as a nested VM is the heart of our homelab setup. By enabling 
 - [VMware: Enabling Nested Virtualization](https://docs.vmware.com/en/VMware-Workstation-Pro/17/com.vmware.ws.using.doc/GUID-E79B6C24-B1F1-4F90-893C-85664C59A722.html)
 - [VirtualBox: Manual on Nested Virtualization](https://www.virtualbox.org/manual/ch06.html#nested-virt)
 - [Proxmox Wiki: Running Proxmox on VMware](https://pve.proxmox.com/wiki/Proxmox_VE_inside_VMware)
+
+## Next Lesson
+[Next Lesson: 01-08 - Proxmox Initial Configuration](/lessons/module-1/01-08-proxmox-initial-configuration)

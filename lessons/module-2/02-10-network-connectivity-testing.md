@@ -63,3 +63,6 @@ Successful connectivity testing marks the completion of the "Build" phase of you
 - [Nmap Network Scanning Guide](https://nmap.org/book/man.html)
 - [ICMP Protocol Overview (RFC 792)](https://datatracker.ietf.org/doc/html/rfc792)
 - [Understanding Traceroute](https://www.net.princeton.edu/traceroute.html)
+
+## Next Lesson
+[Next Lesson: 03-01 - Linux Containers (LXC) Fundamentals](/lessons/module-3/03-01-linux-containers-lxc-fundamentals)

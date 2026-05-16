@@ -53,3 +53,6 @@ Web server logs are a goldmine for security analysts. By understanding the struc
 - [Wazuh Documentation: Monitoring Web Server Logs](https://documentation.wazuh.com/current/user-manual/capabilities/log-data-collection/index.html)
 - [Nginx: Logging Documentation](https://nginx.org/en/docs/http/ngx_http_log_module.html)
 - [SANS Institute: Web Server Log Analysis for Security Professionals](https://www.sans.org/white-papers/117/)
+
+## Next Lesson
+[Next Lesson: 05-10 - Implementing Proxmox Firewall Mitigations](/lessons/module-5/05-10-implementing-proxmox-firewall-mitigations)

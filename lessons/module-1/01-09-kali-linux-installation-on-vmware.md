@@ -57,3 +57,6 @@ Kali Linux is the "Swiss Army Knife" of our security lab. By installing it on ou
 - [Kali Linux Tool Documentation](https://www.kali.org/tools/)
 - [Download Kali Linux VM Images](https://www.kali.org/get-kali/#kali-virtual-machines)
 - [Offensive Security: Kali Linux Training](https://www.offsec.com/kali-training/)
+
+## Next Lesson
+[Next Lesson: 01-10 - Attaching Kali to the Host-Only Network](/lessons/module-1/01-10-attaching-kali-to-the-host-only-network)

@@ -43,3 +43,6 @@ LXC provides a high-performance, lightweight virtualization solution by sharing 
 - [Proxmox VE LXC Documentation](https://pve.proxmox.com/wiki/Linux_Container)
 - [Linux Namespaces Overview (man7.org)](https://man7.org/linux/man-pages/man7/namespaces.7.html)
 - [Cgroups Introduction](https://www.kernel.org/doc/Documentation/cgroup-v1/cgroups.txt)
+
+## Next Lesson
+[Next Lesson: 03-02 - Downloading LXC Templates in Proxmox](/lessons/module-3/03-02-downloading-lxc-templates-in-proxmox)

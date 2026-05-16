@@ -58,3 +58,6 @@ Initial configuration is the first step in taking control of your Proxmox enviro
 - [Proxmox VE: System Software Updates](https://pve.proxmox.com/wiki/System_Software_Updates)
 - [Proxmox VE: Storage Documentation](https://pve.proxmox.com/wiki/Storage)
 - [Securing Proxmox VE](https://pve.proxmox.com/wiki/General_Virtualization_Security_Tips)
+
+## Next Lesson
+[Next Lesson: 01-09 - Attacker OS Installation](/lessons/module-1/01-09-kali-linux-installation-on-vmware)

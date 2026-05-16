@@ -60,3 +60,6 @@ Defensive security is more than just installing software; it is about following 
 - [NIST: Computer Security Incident Handling Guide](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf)
 - [CISA: Incident Response Training](https://www.cisa.gov/incident-response-training-guides)
 - [MITRE ATT&CK: Defend Tactics](https://d3fend.mitre.org/)
+
+## Next Lesson
+[Next Lesson: 05-02 - Host-Based Logging with Syslog](/lessons/module-5/05-02-host-based-logging-with-syslog)

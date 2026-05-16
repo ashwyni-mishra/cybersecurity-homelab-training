@@ -67,3 +67,6 @@ Without agents, a SIEM is blind. By installing the Wazuh agent on your Proxmox L
 - [Wazuh Agent Deployment Guide](https://documentation.wazuh.com/current/installation-guide/wazuh-agent/index.html)
 - [Wazuh File Integrity Monitoring](https://documentation.wazuh.com/current/user-manual/capabilities/file-integrity/index.html)
 - [Wazuh Vulnerability Detection](https://documentation.wazuh.com/current/user-manual/capabilities/vulnerability-detection/index.html)
+
+## Next Lesson
+[Next Lesson: 05-08 - Detecting Nmap Scans in Wazuh](/lessons/module-5/05-08-detecting-nmap-scans-in-wazuh)

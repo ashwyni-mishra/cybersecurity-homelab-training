@@ -60,3 +60,6 @@ Nested virtualization is a powerful technique for creating hierarchical lab envi
 - [VMware Documentation: Running Nested VMs](https://docs.vmware.com/en/VMware-Workstation-Pro/17/com.vmware.ws.using.doc/GUID-E79B6C24-B1F1-4F90-893C-85664C59A722.html)
 - [Proxmox VE: Nested Virtualization Guide](https://pve.proxmox.com/wiki/Nested_Virtualization)
 - [AMD Virtualization (AMD-V™) Technology](https://www.amd.com/en/technologies/virtualization)
+
+## Next Lesson
+[Next Lesson: 01-02 - Host BIOS and Hardware Acceleration](/lessons/module-1/01-02-host-bios-and-hardware-acceleration)

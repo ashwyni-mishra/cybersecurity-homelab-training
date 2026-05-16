@@ -59,3 +59,6 @@ The L1 hypervisor is the foundation of your nested lab. Whether you choose VMwar
 - [Oracle VM VirtualBox User Manual](https://www.virtualbox.org/manual/UserManual.html)
 - [KVM (Kernel-based Virtual Machine) Official Site](https://www.linux-kvm.org/page/Main_Page)
 - [VMware Fusion Documentation (for macOS)](https://docs.vmware.com/en/VMware-Fusion/index.html)
+
+## Next Lesson
+[Next Lesson: 01-04 - Virtual Network Configuration](/lessons/module-1/01-04-vmware-virtual-network-editor)

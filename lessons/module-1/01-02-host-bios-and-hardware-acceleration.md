@@ -55,3 +55,6 @@ Hardware acceleration is the foundation of modern nested virtualization. By enab
 - [AMD Virtualization (AMD-V™) Overview](https://www.amd.com/en/technologies/virtualization)
 - [Understanding EPT (Extended Page Tables)](https://en.wikipedia.org/wiki/Second_Level_Address_Translation)
 - [BIOS/UEFI Virtualization Settings Guide](https://www.howtogeek.com/213795/how-to-enable-intel-vt-x-in-your-computers-bios-or-uefi-firmware/)
+
+## Next Lesson
+[Next Lesson: 01-03 - Setting Up the Primary Hypervisor](/lessons/module-1/01-03-installing-vmware-workstation)

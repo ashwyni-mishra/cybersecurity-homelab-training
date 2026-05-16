@@ -56,3 +56,6 @@ Establishing a DMZ is a critical skill for any security architect. By isolating 
 - [SANS Institute: DMZ Design and Implementation](https://www.sans.org/white-papers/952/)
 - [pfSense Documentation: Security Considerations](https://docs.netgate.com/pfsense/en/latest/book/firewall/firewall-rules.html)
 - [Understanding the Three-Legged Firewall Model](https://www.firewall.cx/networking-topics/firewalls/154-firewall-types-dmz.html)
+
+## Next Lesson
+[Next Lesson: 02-09 - Firewall Rules for the Offensive Network](/lessons/module-2/02-09-firewall-rules-for-the-offensive-network)

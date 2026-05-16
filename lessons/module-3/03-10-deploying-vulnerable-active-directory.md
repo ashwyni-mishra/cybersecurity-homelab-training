@@ -58,3 +58,6 @@ Deploying a vulnerable Active Directory environment is the final and most comple
 - [Microsoft: Active Directory Domain Services Overview](https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/get-started/ad-ds-overview)
 - [The Hacker Recipes: Active Directory Movement](https://www.thehacker.recipes/ad/movement)
 - [ADSecurity.org: Common AD Attack Methods](https://adsecurity.org/)
+
+## Next Lesson
+[Next Lesson: 04-01 - Offensive Methodology Overview](/lessons/module-4/04-01-offensive-methodology-overview)

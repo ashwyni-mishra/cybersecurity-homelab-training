@@ -52,3 +52,6 @@ Passive Reconnaissance and OSINT are the foundation of any successful offensive 
 - [Google Hacking Database (GHDB)](https://www.exploit-db.com/google-hacking-database) - A list of useful Google Dorks.
 - [Shodan](https://www.shodan.io/) - The search engine for the Internet of Things.
 - [Sublist3r GitHub](https://github.com/aboul3la/Sublist3r) - Tool for subdomain enumeration.
+
+## Next Lesson
+[Next Lesson: 04-03 - Active Network Discovery with Nmap](/lessons/module-4/04-03-active-network-discovery-with-nmap)

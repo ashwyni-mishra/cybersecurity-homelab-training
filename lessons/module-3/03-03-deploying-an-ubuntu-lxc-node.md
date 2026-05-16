@@ -54,3 +54,6 @@ By following the Proxmox deployment wizard, we can quickly instantiate an Ubuntu
 - [Proxmox VE: Creating Containers](https://pve.proxmox.com/wiki/Linux_Container#_creating_containers)
 - [Ubuntu Server Official Documentation](https://ubuntu.com/server/docs)
 - [LXC Security: Privileged vs Unprivileged Containers](https://linuxcontainers.org/lxc/introduction/#unprivileged-containers)
+
+## Next Lesson
+[Next Lesson: 03-04 - Installing Docker in LXC](/lessons/module-3/03-04-installing-docker-in-lxc)

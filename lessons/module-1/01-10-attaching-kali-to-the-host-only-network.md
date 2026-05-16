@@ -57,3 +57,6 @@ By moving Kali Linux to the Host-Only network, we have successfully established 
 - [VirtualBox: Host-Only Networking](https://www.virtualbox.org/manual/ch06.html#network_hostonly)
 - [Kali Linux: Network Configuration](https://www.kali.org/docs/networking/basic-network-configuration/)
 - [NIST: Guide to Malware Incident Prevention and Handling (SP 800-83)](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-83r1.pdf)
+
+## Next Lesson
+[Next Lesson: 02-01 - Proxmox Virtual Bridges Explained](/lessons/module-2/02-01-proxmox-virtual-bridges-explained)

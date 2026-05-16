@@ -61,3 +61,6 @@ The `vmbr0` management interface is the most critical network component of your 
 - [Proxmox VE: Network Configuration](https://pve.proxmox.com/wiki/Network_Configuration)
 - [VMware Workstation: Understanding NAT Networking](https://docs.vmware.com/en/VMware-Workstation-Pro/17/com.vmware.workstation.using.doc/GUID-66978583-6D6E-4E60-9118-2045E1B8463B.html)
 - [Introduction to IP Addressing and Subnetting](https://www.cisco.com/c/en/us/support/docs/ip/routing-information-protocol-rip/13788-3.html)
+
+## Next Lesson
+[Next Lesson: 02-03 - Configuring vmbr1 Isolated Sandbox](/lessons/module-2/02-03-configuring-vmbr1-isolated-sandbox)

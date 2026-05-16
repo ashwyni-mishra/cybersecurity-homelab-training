@@ -67,3 +67,6 @@ Network configuration is the "glue" of your virtual lab. By understanding the di
 - [Proxmox VE: Network Configuration Guide](https://pve.proxmox.com/wiki/Network_Configuration)
 - [VirtualBox: Virtual Networking Modes](https://www.virtualbox.org/manual/ch06.html)
 - [Libvirt: Virtual Networking Documentation](https://libvirt.org/formatnetwork.html)
+
+## Next Lesson
+[Next Lesson: 01-05 - Creating the Host-Only Network](/lessons/module-1/01-05-creating-the-host-only-network)

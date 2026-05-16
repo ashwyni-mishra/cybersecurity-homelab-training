@@ -63,3 +63,6 @@ Wireshark translates the invisible zeroes and ones of network traffic into a hum
 - [Wireshark Display Filter Reference](https://www.wireshark.org/docs/dfref/)
 - [Malware Traffic Analysis (Practice PCAPs)](https://www.malware-traffic-analysis.net/)
 - [SANS: Intro to Wireshark Filtering](https://www.sans.org/blog/wireshark-display-filters/)
+
+## Next Lesson
+[Next Lesson: 05-05 - Introduction to SIEM Systems](/lessons/module-5/05-05-introduction-to-siem-systems)

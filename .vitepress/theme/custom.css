@@ -1,0 +1,8 @@
+/* Custom styles can be added here */
+:root {
+  --vp-c-brand: #3eaf7c;
+  --vp-c-brand-light: #4abf8a;
+  --vp-c-brand-lighter: #57cc99;
+  --vp-c-brand-dark: #349669;
+  --vp-c-brand-darker: #2d815b;
+}

@@ -56,3 +56,6 @@ Downloading LXC templates is a fundamental step in Proxmox administration. By us
 - [Proxmox VE Documentation: Container Images](https://pve.proxmox.com/wiki/Linux_Container#_container_images)
 - [PVEAM (Proxmox VE Appliance Manager) Manual](https://pve.proxmox.com/pve-docs/pveam.1.html)
 - [TurnKey Linux Templates in Proxmox](https://www.turnkeylinux.org/proxmox)
+
+## Next Lesson
+[Next Lesson: 03-03 - Deploying an Ubuntu LXC Node](/lessons/module-3/03-03-deploying-an-ubuntu-lxc-node)

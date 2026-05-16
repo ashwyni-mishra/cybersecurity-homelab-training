@@ -39,4 +39,12 @@ Master the penetration testing methodology. Conduct reconnaissance, perform vuln
 ### Module 5: Defensive Security
 Implement enterprise-grade monitoring and detection. Deploy a SIEM solution (Wazuh), analyze network traffic, and practice structured incident response using the PICERL cycle.
 
-[Start Defensive Operations →](/lessons/module-5/05-01-defensive-methodology-and-incident-response)
+---
+
+### Feedback & Contributions
+::: info 💡 HELP US IMPROVE
+Found a typo? Have a suggestion for a new lesson? We value your feedback.
+- [Open a GitHub Issue](https://github.com/ashwyni-mishra/cybersecurity-homelab-training/issues)
+- [Submit a Pull Request](https://github.com/ashwyni-mishra/cybersecurity-homelab-training/pulls)
+:::
+

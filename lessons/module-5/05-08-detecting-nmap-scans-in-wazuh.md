@@ -54,3 +54,6 @@ The ability to detect Nmap scans transforms your homelab from a static set of VM
 - [Nmap Reference Guide: Detection and Evasion](https://nmap.org/book/man-bypass-firewalls-ids.html)
 - [MITRE ATT&CK: Network Service Scanning (T1595.001)](https://attack.mitre.org/techniques/T1595/001/)
 - [Wazuh Ruleset GitHub Repository](https://github.com/wazuh/wazuh/tree/master/ruleset)
+
+## Next Lesson
+[Next Lesson: 05-09 - Detecting Web Attacks in Logs](/lessons/module-5/05-09-detecting-web-attacks-in-logs)

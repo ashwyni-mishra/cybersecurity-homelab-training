@@ -64,3 +64,6 @@ iface vmbr1 inet manual
 - [Linux Foundation: Bridge documentation](https://wiki.linuxfoundation.org/networking/bridge)
 - [Understanding Layer 2 vs Layer 3 Networking](https://www.cisco.com/c/en/us/support/docs/ip/routing-information-protocol-rip/13788-3.html)
 - [Proxmox Security: Hardening the Hypervisor](https://pve.proxmox.com/wiki/Hardening_Proxmox_VE)
+
+## Next Lesson
+[Next Lesson: 02-04 - Introduction to Virtual Firewalls](/lessons/module-2/02-04-introduction-to-virtual-firewalls)

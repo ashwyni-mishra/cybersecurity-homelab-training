@@ -63,3 +63,6 @@ OWASP Juice Shop provides a realistic and modern target for our security lab. By
 - [Pwning OWASP Juice Shop (Free E-book)](https://pwning.owasp-juice.shop/)
 - [Juice Shop GitHub Repository](https://github.com/juice-shop/juice-shop)
 - [Node.js Security Best Practices](https://nodejs.org/en/docs/guides/security/)
+
+## Next Lesson
+[Next Lesson: 03-08 - Verifying Target Accessibility](/lessons/module-3/03-08-verifying-target-accessibility)

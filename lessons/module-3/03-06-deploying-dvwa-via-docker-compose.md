@@ -62,3 +62,6 @@ By using Docker Compose, we can deploy the Damn Vulnerable Web Application in se
 - [DVWA Official GitHub Repository](https://github.com/digininja/DVWA)
 - [Vulnerables/web-dvwa Docker Hub Page](https://hub.docker.com/r/vulnerables/web-dvwa)
 - [OWASP: Top 10 Web Application Security Risks](https://owasp.org/www-project-top-ten/)
+
+## Next Lesson
+[Next Lesson: 03-07 - Deploying OWASP Juice Shop](/lessons/module-3/03-07-deploying-owasp-juice-shop)

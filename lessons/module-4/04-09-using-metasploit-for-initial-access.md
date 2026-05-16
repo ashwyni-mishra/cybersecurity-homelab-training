@@ -59,3 +59,6 @@ The Metasploit Framework is an essential tool for streamlining the exploitation 
 - [Rapid7 Metasploit Documentation](https://docs.metasploit.com/)
 - [Exploit-DB](https://www.exploit-db.com/) - A source for many exploits found in Metasploit.
 - [Metasploit Cheat Sheet](https://www.comparitech.com/net-admin/metasploit-cheat-sheet/)
+
+## Next Lesson
+[Next Lesson: 04-10 - Establishing Reverse Shells](/lessons/module-4/04-10-establishing-reverse-shells)

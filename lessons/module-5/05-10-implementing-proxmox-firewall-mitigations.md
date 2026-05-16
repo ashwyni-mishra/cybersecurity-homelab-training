@@ -59,3 +59,8 @@ The Proxmox firewall is a powerful, enterprise-grade tool that provides granular
 - [Proxmox Wiki: Firewall Examples](https://pve.proxmox.com/wiki/Firewall)
 - [Netfilter/IPTables: The engine behind Proxmox Firewall](https://www.netfilter.org/)
 - [NIST: Guidelines on Firewalls and Firewall Policy (SP 800-41)](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-41r1.pdf)
+
+## Next Lesson
+Congratulations! You have completed the homelab training course.
+
+[Return to Curriculum Index](/curriculum)

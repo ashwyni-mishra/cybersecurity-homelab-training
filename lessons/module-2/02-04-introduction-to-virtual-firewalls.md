@@ -58,3 +58,6 @@ Virtual firewalls like pfSense are the heart of a secure and realistic homelab. 
 - [Cisco: What is a Firewall?](https://www.cisco.com/c/en/us/products/security/firewalls/what-is-a-firewall.html)
 - [Proxmox VE: Using pfSense as a Virtual Firewall](https://pve.proxmox.com/wiki/PfSense_Guest_Notes)
 - [NIST: Guidelines on Firewalls and Firewall Policy](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-41r1.pdf)
+
+## Next Lesson
+[Next Lesson: 02-05 - Deploying pfSense in Proxmox](/lessons/module-2/02-05-deploying-pfsense-in-proxmox)

@@ -39,3 +39,6 @@ Burp Suite is the most critical tool in a web penetration tester's toolkit. By a
 - [PortSwigger Web Security Academy](https://portswigger.net/web-security) - Free labs for learning Burp Suite.
 - [Burp Suite Cheat Sheet](https://portswigger.net/burp/documentation/desktop/penetration-testing)
 - [OWASP: Testing with Burp Suite](https://owasp.org/www-project-web-security-testing-guide/latest/3-The_Testing_Paradigm/3.1-Testing_Tools/3.1.1-Burp_Suite)
+
+## Next Lesson
+[Next Lesson: 04-07 - Exploiting DVWA Command Injection](/lessons/module-4/04-07-exploiting-dvwa-command-injection)

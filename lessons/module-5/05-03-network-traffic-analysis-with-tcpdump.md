@@ -72,3 +72,6 @@ tcpdump -r investigation.pcap port 80 -A
 - [Daniel Miessler's tcpdump Primer](https://www.danielmiessler.com/study/tcpdump/)
 - [SANS: Tcpdump Cheat Sheet](https://www.sans.org/blog/tcpdump-cheat-sheet/)
 - [Wireshark Wiki: BPF Syntax](https://wiki.wireshark.org/CaptureFilters)
+
+## Next Lesson
+[Next Lesson: 05-04 - Analyzing pcaps with Wireshark](/lessons/module-5/05-04-analyzing-pcaps-with-wireshark)

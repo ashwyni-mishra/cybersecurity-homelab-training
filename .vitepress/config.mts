@@ -19,6 +19,7 @@ export default withMermaid({
     logo: 'https://github.com/ashwyni-mishra.png',
     nav: [
       { text: 'Home', link: '/' },
+      { text: 'How to Follow', link: '/how-to-follow' },
       { text: 'Overview', link: '/overview' },
       { text: 'Guidelines', link: '/guidelines' },
       { text: 'Author', link: '/author' }
@@ -30,6 +31,7 @@ export default withMermaid({
       {
         text: 'Course Index',
         items: [
+          { text: 'How to Follow', link: '/how-to-follow' },
           { text: 'Table of Contents', link: '/curriculum' },
           { text: 'Project Overview', link: '/overview' },
           { text: 'Guidelines', link: '/' }

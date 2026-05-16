@@ -70,3 +70,6 @@ Proxmox Virtual Bridges are the virtual switches that power our lab's connectivi
 - [Linux Bridge Architecture Explained](https://wiki.linuxfoundation.org/networking/bridge)
 - [pfSense Documentation: Virtualizing with Proxmox](https://docs.netgate.com/pfsense/en/latest/recipes/virtualize-proxmox-ve.html)
 - [Debian Network Configuration](https://wiki.debian.org/NetworkConfiguration)
+
+## Next Lesson
+[Next Lesson: 02-02 - Configuring vmbr0 Management Interface](/lessons/module-2/02-02-configuring-vmbr0-management-interface)

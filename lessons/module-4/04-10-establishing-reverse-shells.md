@@ -57,7 +57,10 @@ export TERM=xterm
 Reverse shells are a cornerstone of the exploitation phase in our lab. By understanding how to set up listeners and deploy varied payloads, you can bypass network security controls and gain a functional foothold on target systems. Mastery of these techniques is essential for any aspiring penetration tester, as it allows for the transition from a simple exploit to a comprehensive system analysis.
 
 ## Reference links
-- [PayloadsAllTheThings: Reverse Shell Cheat Sheet](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md)
+- [PayloadsAllTheThings: Reverse Shell Cheat Sheet](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet)
 - [Netcat: The TCP/IP Swiss Army Knife](https://nc110.sourceforge.io/)
 - [OWASP: Reverse Shell Guide](https://cheatsheetseries.owasp.org/cheatsheets/Reverse_Shell_Cheat_Sheet.html)
 - [Python pty module documentation](https://docs.python.org/3/library/pty.html)
+
+## Next Lesson
+[Next Lesson: 05-01 - Defensive Methodology and Incident Response](/lessons/module-5/05-01-defensive-methodology-and-incident-response)

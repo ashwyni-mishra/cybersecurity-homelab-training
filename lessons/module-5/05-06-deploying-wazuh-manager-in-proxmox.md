@@ -60,3 +60,6 @@ Deploying the Wazuh Manager in Proxmox provides you with a professional-grade se
 - [Wazuh Minimum Hardware Requirements](https://documentation.wazuh.com/current/installation-guide/requirements.html)
 - [Proxmox: Creating a Linux VM Guide](https://pve.proxmox.com/pve-docs/pve-admin-guide.html#qm_virtual_machines)
 - [OpenSearch Documentation](https://opensearch.org/docs/latest/)
+
+## Next Lesson
+[Next Lesson: 05-07 - Installing Wazuh Agents on Targets](/lessons/module-5/05-07-installing-wazuh-agents-on-targets)

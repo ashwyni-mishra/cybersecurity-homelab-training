@@ -43,3 +43,6 @@ The Offensive Methodology Overview teaches that professional security testing is
 - [PTES Technical Guide](http://www.pentest-standard.org/index.php/PTES_Technical_Guideline)
 - [Lockheed Martin: Cyber Kill Chain](https://www.lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html)
 - [OWASP Web Security Testing Guide](https://owasp.org/www-project-web-security-testing-guide/)
+
+## Next Lesson
+[Next Lesson: 04-02 - Passive Reconnaissance and OSINT](/lessons/module-4/04-02-passive-reconnaissance-and-osint)

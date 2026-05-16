@@ -47,3 +47,6 @@ Port Scanning and Service Enumeration bridge the gap between initial discovery a
 - [HackTricks: Pentesting Services](https://book.hacktricks.xyz/network-services-pentesting)
 - [Enum4linux-ng GitHub](https://github.com/carlospolop/enum4linux-ng)
 - [CWE-200: Exposure of Sensitive Information through Data Under-extraction](https://cwe.mitre.org/data/definitions/200.html)
+
+## Next Lesson
+[Next Lesson: 04-05 - Web Application Vulnerability Scanning](/lessons/module-4/04-05-web-application-vulnerability-scanning)

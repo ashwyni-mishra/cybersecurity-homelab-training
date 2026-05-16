@@ -49,5 +49,8 @@ Creating a Windows Server template is a "do-it-once" task that pays dividends th
 ## Reference links
 - [Proxmox VE: Windows Guest Best Practices](https://pve.proxmox.com/wiki/Windows_10_guest_best_practices)
 - [Microsoft: Sysprep (System Preparation) Overview](https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/sysprep--system-preparation--overview)
-- [VirtIO Windows Drivers Download (Fedora Project)](https://github.com/virtio-win/virtio-win-pkg-scripts/blob/master/README.md)
+- [VirtIO Windows Drivers Download (Fedora Project)](https://github.com/virtio-win/virtio-win-pkg-scripts/blob/master/README)
 - [Proxmox Wiki: QEMU Guest Agent](https://pve.proxmox.com/wiki/Qemu-guest-agent)
+
+## Next Lesson
+[Next Lesson: 03-10 - Deploying Vulnerable Active Directory](/lessons/module-3/03-10-deploying-vulnerable-active-directory)

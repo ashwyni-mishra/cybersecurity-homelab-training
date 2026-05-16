@@ -63,3 +63,6 @@ Docker Compose is an essential tool for any security lab. It allows us to treat 
 - [Docker Compose Overview](https://docs.docker.com/compose/)
 - [Docker Compose File Specification](https://docs.docker.com/compose/compose-file/)
 - [Best Practices for Docker Compose](https://docs.docker.com/compose/best-practices/)
+
+## Next Lesson
+[Next Lesson: 03-06 - Deploying DVWA via Docker Compose](/lessons/module-3/03-06-deploying-dvwa-via-docker-compose)

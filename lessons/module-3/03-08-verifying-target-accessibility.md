@@ -58,3 +58,6 @@ Verification is the bridge between infrastructure setup and security testing. By
 - [How to use the Ping command](https://www.linuxfoundation.org/blog/blog/classic-sysadmin-how-to-use-the-ping-command-on-linux)
 - [pfSense: Troubleshooting Firewall Rules](https://docs.netgate.com/pfsense/en/latest/firewall/troubleshooting-blocked-traffic.html)
 - [Understanding HTTP Status Codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
+
+## Next Lesson
+[Next Lesson: 03-09 - Creating Windows Server VM Templates](/lessons/module-3/03-09-creating-windows-server-vm-templates)
