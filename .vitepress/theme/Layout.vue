@@ -37,10 +37,10 @@ function acceptGuidelines() {
           <div class="footer-section">
             <h4>Connect</h4>
             <div class="social-links">
-              <a href="https://ashwhwanimishra.me/" target="_blank">Website</a>
+              <a href="https://ashwanimishra.me/" target="_blank">Website</a>
               <a href="https://github.com/ashwyni-mishra" target="_blank">GitHub</a>
               <a href="https://linkedin.com/in/ashwyni-mishra" target="_blank">LinkedIn</a>
-              <a href="mailto:contact@ashwanimishra.tech">Email</a>
+              <a href="mailto:mishra.ashwyni@gmail.com">Email</a>
             </div>
           </div>
           <div class="footer-section">
